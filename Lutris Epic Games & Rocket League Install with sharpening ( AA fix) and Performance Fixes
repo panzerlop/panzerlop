@@ -17,7 +17,7 @@ Go to Lutris, right click 'Epic Games Store' and select browse files, from here 
 
 Right click insie the folder > create new text file > empty the name input box and put the following: TASystemSettings.ini
 
-Here you can find the contents of that .ini file, open it with Kate ( or any text editor ) and paste the contents as they are shown here: https://pastebin.com/XBE3EHk0
+Oen TASystemSettings.ini with Kate ( or any text editor ) and paste the contents as they are shown here: https://pastebin.com/XBE3EHk0
 
 Note: 
-In EPIC Games Launcher settings I uncheck both options in "Desktop Notifcations" because they are glitchy.
+In EPIC Games Launcher settings I uncheck both options in "Desktop Notifcations" because they are glitchy when launching the platform.
