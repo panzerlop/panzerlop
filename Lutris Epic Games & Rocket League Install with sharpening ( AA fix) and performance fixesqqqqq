@@ -1,0 +1,24 @@
+
+If you don't have Lutris Open your Terminal:
+
+sudo add-apt-repository ppa:lutris-team/lutris && sudo apt update && sudo apt install lutris
+
+Otherwise - Run Lutris...
+
+https://lutris.net/games/epic-games-store/
+
+Since there are currently no uploaded Lutris scripts that do anything other than install the 'Epic Games Store', it makes sense to just use the latest Lutris installer for the 'Epic Games Store'.
+
+Once it loads and you've logged in to the Epic Launcher download Rocket League.
+
+Go to Lutris, right click 'Epic Games Store' and select browse files, from here navigate to epic-games-store/drive_c/users/USERNAME/Documents/My Games/Rocket League/TAGame/Config/
+
+^^ Again please replace USERNAME with your own.
+
+Right click insie the folder > create new text file > empty the name input box and put the following: TASystemSettings.ini
+
+Here you can find the contents of that .ini file, open it with Kate ( or any text editor ) and paste the contents as they are here: https://pastebin.com/XBE3EHk0
+
+
+
+I also reccomendou uncheck both options in "Desktop Notifcations" from Epic Launchers 'Settings' because jthey are glitchy at least for me.
