@@ -1,7 +1,7 @@
 Navigate in your file manager to  /etc/pulse/daemon.conf
 > Right click it and select open with Kate (Kubuntu)
 
-Change the following to these values:
+Change the following to these values, remove the preceding ";" so it looks like;
 
 default-fragments = 2
 default-fragment-size-msec = 4
