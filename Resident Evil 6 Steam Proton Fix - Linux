@@ -13,7 +13,8 @@ python3 -m pipx ensurepath
 
 >>Close the console and open it again...
 
->>Next we install a needed media library to the games proton prefix.
+>>Next we chnage the compatability mode to windows XP and then install a needed media library to the games proton prefix.
+( note try going to windows 7 for the co op audio error)
 
 protontricks 221040 winxp
 protontricks 221040 -q wmp11
