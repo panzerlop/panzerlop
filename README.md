@@ -1,3 +1,5 @@
+The  TASystemSettings.ini is for Rocket League it makes it sharper and run better.
+
 - 👋 Hi, I’m @panzerlop
 - 👀 I’m interested in writing, coding, gaming & music production
 - 📫 How to reach me ... panzerlop@protonmail.com
