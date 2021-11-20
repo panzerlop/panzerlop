@@ -1,0 +1,25 @@
+Navigate in your file manager to  /etc/pulse/daemon.conf
+> Right click it and select open with Kate (Kubuntu)
+
+Change the following to these values:
+
+default-fragments = 2
+default-fragment-size-msec = 4
+
+Navigate in your file manager to
+
+/etc/pulse/default.pa
+
+find load-module module-udev-detect
+
+Change the line to look like so:
+
+load-module module-udev-detect tsched=0
+
+Restart Pulse Audio:
+
+pulseaudio -k
+
+>> You can try adding this to Steam Game launch permaters, 60, 150 etc:
+
+PULSE_LATENCY_MSEC=60 %command%
