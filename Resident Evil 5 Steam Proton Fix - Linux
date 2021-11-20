@@ -1,0 +1,37 @@
+
+In your Steam library right click Resident Evil 6, select Properties  >  compatibility and then check the "Force the use of a specific Steam Play Compatibility tool" box
+Make sure you select Proton 4.11-13
+
+Next use the following in the console:
+
+sudo apt install pipx
+sudo apt install -y python3-pip python3-setuptools python3-venv
+python3 -m pip install --user pipx
+pipx install protontricks
+
+python3 -m pipx ensurepath
+
+>>Close the console and open it again...
+
+Run the ensure path command once more( python3 -m pipx ensurepath). Read the output to check it doesn't show an error.
+
+>>Next we install a needed media library to the games proton prefix.
+
+protontricks 221040 -q wmp11
+
+>> we need to download this pack that replaces a few videos that can cause crashes here's an upload I found :
+https://www.mediafire.com/file/h710n7937rhwm6p/Fix_Black_Screen_Resident_Evil_6.rar
+
+>>Right click Resident Evil 6 in Steam
+In launch options put:
+PULSE_LATENCY_MSEC=150
+
+[ You may not need that command but I find the audio can 'crackle' a bit in this game. ]
+
+>> Now click on the tab that says "Local Files" and click "Browse..."
+In the window that comes up go into the "nativePC "folder and then "movie"
+Select all files inside the .rar we downloaded earlier and drag them into the "movie" folder. Select replace for all.
+
+The game saves fine but you must complete the first level for a proper save to be made, you'll then go to the main menu.
+
+Fin.
