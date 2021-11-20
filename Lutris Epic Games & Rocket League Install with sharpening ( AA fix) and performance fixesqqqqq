@@ -1,5 +1,5 @@
 
-If you don't have Lutris Open your Terminal:
+If you don't have Lutris Open your Terminal and we'll quickly install it:
 
 sudo add-apt-repository ppa:lutris-team/lutris && sudo apt update && sudo apt install lutris
 
