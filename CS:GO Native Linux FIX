@@ -1,12 +1,30 @@
-In THe Console:
+In the Console:
+
+
+sudo dpkg --add-architecture i386
+
+
+sudo apt install mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 && sudo apt install wget gdebi-core && sudo apt install libtcmalloc-minimal4 && sudo apt install libgtk2.0-0:i386
+
+sudo apt-get update && sudo apt upgrade
+
+
+Reboot.
 
 
 sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev libtcmalloc-minimal4
 
+
 sudo updatedb
+
 
 cd $HOME/.local/share/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/bin/linux64 && mv libtcmalloc_minimal.so.0 libtcmalloc_minimal.so.0.orig && cp /usr/lib/{,x86_64-linux-gnu/}libtcmalloc_minimal.so.4.5.9 && libtcmalloc_minimal.so.0
 
-If you have not installed  CS:GO in the default directory, change where the above cds to.
 
-Launch options "-nojoy -novid"
+If you have not got cs:go installed in the default directory, change where the above cds too.
+
+
+Right click the game and set the launch options "-nojoy -novid"
+
+
+Enjoy.
