@@ -28,7 +28,7 @@ Then navigate to the location where the game is installed, for me this is:
 
 ^^ Note: You'll have to show hidden folders to see ones that start with a ".", select the file explorer and then press Ctrl + H 
 
-. Open a Terminal window in this location and type the following.
+Open a Terminal window in this location and type the following; ( This can be done by right clicking and selecting open terminal. Or pressing SHIFT + F4 )
 
 cp /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.5.9 libtcmalloc_minimal.so.0 
 
