@@ -23,7 +23,7 @@ https://www.mediafire.com/file/h710n7937rhwm6p/Fix_Black_Screen_Resident_Evil_6.
 
 >>Right click Resident Evil 6 in Steam
 In launch options put:
-PULSE_LATENCY_MSEC=150
+PULSE_LATENCY_MSEC=60 %command%
 
 [ You may not need that command but I find the audio can 'crackle' a bit in this game. ]
 
