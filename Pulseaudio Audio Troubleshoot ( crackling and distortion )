@@ -1,5 +1,7 @@
+
 Navigate in your file manager to  /etc/pulse/daemon.conf
-> Right click it and select open with Kate (Kubuntu)
+
+> Right click it and select open with 'Kate' (Kubuntu) or any suitable text editor.
 
 Change the following to these values, remove the preceding ";" so it looks like;
 
