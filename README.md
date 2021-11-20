@@ -1,4 +1,4 @@
-The  TASystemSettings.ini is for Rocket League it makes it sharper and run better.
+The  TASystemSettings.ini is for Rocket League it makes it sharper and run better. Works on Windows too.
 
 - 👋 Hi, I’m @panzerlop
 - 👀 I’m interested in writing, coding, gaming & music production
