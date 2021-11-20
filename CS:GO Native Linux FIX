@@ -1,0 +1,12 @@
+In THe Console:
+
+
+sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev libtcmalloc-minimal4
+
+sudo updatedb
+
+cd $HOME/.local/share/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/bin/linux64 && mv libtcmalloc_minimal.so.0 libtcmalloc_minimal.so.0.orig && cp /usr/lib/{,x86_64-linux-gnu/}libtcmalloc_minimal.so.4.5.9 && libtcmalloc_minimal.so.0
+
+If you have not installed  CS:GO in the default directory, change where the above cds to.
+
+Launch options "-nojoy -novid"
