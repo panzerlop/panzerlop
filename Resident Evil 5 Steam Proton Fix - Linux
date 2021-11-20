@@ -13,10 +13,9 @@ python3 -m pipx ensurepath
 
 >>Close the console and open it again...
 
-Run the ensure path command once more( python3 -m pipx ensurepath). Read the output to check it doesn't show an error.
-
 >>Next we install a needed media library to the games proton prefix.
 
+protontricks 221040 winxp
 protontricks 221040 -q wmp11
 
 >> we need to download this pack that replaces a few videos that can cause crashes here's an upload I found :
