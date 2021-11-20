@@ -1,0 +1,11 @@
+Issue: Crashing to desktop or running at 2 - 4 fps
+
+Fix:
+
+Right click the game in the Steam Library, select "Properties..."  
+
+Now enable "Force the use of a specific Steam compatability tool" by checking the tickbox next to it. 
+
+In the box underneat click on it, navigate down to "Steam Linux Runtime" 
+
+Close the settings window and the game should now run perfectly.
