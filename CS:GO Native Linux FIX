@@ -1,5 +1,3 @@
-As many will know CS:GO native and other native games have only been running in the Flatpak version for the last couple of weeks or so, last night I finally got it to work here's the steps:
-
 
 In the Console:
 
@@ -34,9 +32,3 @@ cp /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.5.9 libtcmalloc_minimal.so
 
 Right click the game and set the launch options "-nojoy -novid"
 
-
-Enjoy.
-
-PS (from comments):
-
-The issue seems to be with distro's that have updated glibc to 2.34, such as Fedora and Kubuntu
