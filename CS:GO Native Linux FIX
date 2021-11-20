@@ -1,3 +1,6 @@
+As many will know CS:GO native and other native games have only been running in the Flatpak version for the last couple of weeks or so, last night I finally got it to work here's the steps:
+
+
 In the Console:
 
 
@@ -18,15 +21,22 @@ sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev l
 sudo updatedb
 
 
-cd $HOME/.local/share/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/bin/linux64 && mv libtcmalloc_minimal.so.0 libtcmalloc_minimal.so.0.orig && cp /usr/lib/{,x86_64-linux-gnu/}libtcmalloc_minimal.so.4.5.9 && libtcmalloc_minimal.so.0
+sudo apt install libtcmalloc-minimal4
 
 
-If you have not got cs:go installed in the default directory, change where the above cds too.
+Then navigate to the location where the game is installed, for me this is:
 
+/home/USERNAME/.steam/steam/steamapps/common/Counter-Strike Global Offensive/bin
+
+Open a Terminal window in this location and type the following.
+
+cp /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.5.9 libtcmalloc_minimal.so.0 
 
 Right click the game and set the launch options "-nojoy -novid"
 
 
 Enjoy.
+
+PS (from comments):
 
 The issue seems to be with distro's that have updated glibc to 2.34, such as Fedora and Kubuntu
