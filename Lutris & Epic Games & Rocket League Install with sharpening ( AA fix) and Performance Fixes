@@ -17,7 +17,7 @@ Go to Lutris, right click 'Epic Games Store' and select browse files, from here 
 
 Right click insie the folder > create new text file > empty the name input box and put the following: TASystemSettings.ini
 
-Here you can find the contents of that .ini file, open it with Kate ( or any text editor ) 
+Open it with Kate ( or any text editor ).
 
 Paste the contents as they are here: https://github.com/panzerlop/panzerlop/blob/main/TASystemSettings.ini
 
