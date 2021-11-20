@@ -28,3 +28,5 @@ Right click the game and set the launch options "-nojoy -novid"
 
 
 Enjoy.
+
+The issue seems to be with distro's that have updated glibc to 2.34, such as Fedora and Kubuntu
