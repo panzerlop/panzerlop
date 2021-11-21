@@ -1,7 +1,7 @@
 The TASystemSettings.ini is for Rocket League it makes it sharper and more optimised. 
 
 > Use Lutris to install Epic Games Launcher and then download Rocket League. For the best settings : Right click Epic Games Store on Lutris and select 'Browse Files'  You need to put the TASystemSettings.ini in /home/USERNAME/Games/epic-games-store/drive_c/users/USERNAME/Documents/My Games/Rocket League/TAGame/Config/
->Don 't forget where I've written "USERNAME" above you should replace it with your own actual username.
+>Don't forget where I've written "USERNAME" above you should replace it with your own actual username.
 
 . That .ini Works on Windows too ( Documents/My Games/Rocket League/TAGame/Config/ ).
 
