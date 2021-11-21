@@ -1,0 +1,34 @@
+Check for system updates in Discover and if there is any apply them.
+
+Go to settings, Click additonal drivers. Change to latest Nvidia driver metapackage. They go up in number for intance 470 is older than 495.
+
+Once that's completed go back into the console and enter the following;
+
+sudo dpkg --add-architecture i386
+
+sudo apt install mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 && sudo apt install wget gdebi-core && sudo apt install libtcmalloc-minimal4 && sudo apt install libgtk2.0-0:i386
+
+sudo apt-get update && sudo apt upgrade
+
+Now reboot.
+
+Here we install the staging version of WINE and some needed dependencies.
+
+wget -nc https://dl.winehq.org/wine-builds/winehq.key &&
+sudo apt-key add winehq.key && sudo apt-add-repository 'https://dl.winehq.org/wine-builds/ubuntu/'&& sudo apt update && sudo apt install --install-recommends winehq-staging && sudo apt install winetricks
+
+> Type your password and then accept ('Y' then 'Enter') when prompted.
+
+Type winetricks in the Konsole then when the windows appear and you are prompted agree to installl both Mono and Gecko.
+
+Install Steam from offical .deb on site. Download it, then open it with Discover, click install in the top right.
+
+Now click launch.
+
+When you first run the Steam-launcher be patient, a console window will appear asking for you to press Y and allow it to install addtional dependencies.
+
+After this, Steam is installed and you can now run it. 
+
+<b> A CS:GO fix for the native version is still needed, which can be found in this repo: </b> 
+
+https://github.com/panzerlop/panzerlop/blob/main/CS:GO%20Native%20Linux%20FIX%20-%20Steam
