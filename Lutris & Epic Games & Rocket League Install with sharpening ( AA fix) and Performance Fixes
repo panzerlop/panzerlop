@@ -1,5 +1,6 @@
+Lutris is a great compatability tool that automates setting up games to work under WINE / PROTON with thousands of user scripts!
 
-If you don't have Lutris Open your Terminal:
+Open your Terminal:
 
 sudo add-apt-repository ppa:lutris-team/lutris && sudo apt update && sudo apt install lutris
 
