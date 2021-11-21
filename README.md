@@ -11,7 +11,7 @@ _________________________________________________________________
 _________________________________________________________________
 
 
-Operating System: Kubuntu 21.10
+> Operating System: Kubuntu 21.10
 KDE Plasma Version: 5.22.5
 KDE Frameworks Version: 5.86.0
 Qt Version: 5.15.2
