@@ -6,6 +6,6 @@ Right click the game in the Steam Library, select "Properties..."
 
 Now enable "Force the use of a specific Steam compatability tool" by checking the tickbox next to it. 
 
-In the box underneath, click the option "Steam Linux Runtime" in the drop down box.
+In the bdrop down box underneath, click the option "Steam Linux Runtime".
 
-Close the settings window and the game should now run!
+Close the settings window, the game may update and hopefully should now run!
