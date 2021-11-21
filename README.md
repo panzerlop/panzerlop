@@ -1,4 +1,5 @@
 Welcome to my collection of scripts, fixes and guides for Linux ( using Kubuntu ).
+<b> Files Preceded by a number assume previous number has been read and / or completed. </b>
 
 The TASystemSettings.ini is for Rocket League - it makes it sharper and more optimised. 
 
@@ -7,7 +8,7 @@ The TASystemSettings.ini is for Rocket League - it makes it sharper and more opt
 > You need to put the TASystemSettings.ini in /home/USERNAME/Games/epic-games-store/drive_c/users/USERNAME/Documents/My Games/Rocket League/TAGame/Config/
 >Don't forget where I've written "USERNAME" above you should replace it with your own actual username.
 
-. That .ini Works on Windows too ( Documents/My Games/Rocket League/TAGame/Config/ ).
+That .ini Works on Windows too ( Documents/My Games/Rocket League/TAGame/Config/ ).
 
 _________________________________________________________________
 - 👋 Hi, I’m @panzerlop
