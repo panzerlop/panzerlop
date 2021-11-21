@@ -1,5 +1,5 @@
 Welcome to my collection of scripts, fixes and guides for Linux ( using Kubuntu ).
-<b> Files Preceded by a number assume previous number has been read and / or completed. </b>
+<b> Files preceded by a number assume previous number has been read and / or completed. </b>
 
 The TASystemSettings.ini is for Rocket League - it makes it sharper and more optimised. 
 
