@@ -1,3 +1,4 @@
+
 In the Console first we'll do some dependency checks and install required libraries; 
 
 
@@ -24,13 +25,16 @@ Then navigate to the location where the game is installed, for me this is:
 
 /home/USERNAME/.steam/steam/steamapps/common/Counter-Strike Global Offensive/bin
 
-^^ Note: You'll have to show hidden folders to see folders that start with a ".", select the file explorer and then press Ctrl + H 
+^^ Note: You'll have to show hidden folders to see ones that start with a ".", Click on the file explorer window and then press Ctrl + H.
+The folders with the "." prefix will now become visible.
 
-Open a Terminal window in this location and type the following; ( This can be done by right clicking and selecting open terminal. Or pressing SHIFT + F4 )
+Open a Terminal window in this location and type the following;
 
 cp /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.5.9 libtcmalloc_minimal.so.0 
 
 Right click the game and set the launch options "-nojoy -novid"
 
 Fin.
+
+
 
