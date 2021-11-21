@@ -1,7 +1,7 @@
 Welcome to my collection of scripts, fixes and guides for Linux ( using Kubuntu ).
 <b> Files preceded by a number assume previous number has been read and / or completed. </b>
 
-The TASystemSettings.ini is for Rocket League - it makes it sharper and more optimised. 
+The TASystemSettings.ini is for Rocket League - it makes it sharper and more optimised - fixing the blurry image. 
 
 > Use Lutris to install Epic Games Launcher and then download Rocket League. 
 > Right click Epic Games Store on Lutris and select 'Browse Files'
