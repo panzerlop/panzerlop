@@ -1,3 +1,4 @@
+___________________________________________________________________________________________________________________
 > Nice little tool for Rival Mice ( https://github.com/flozz/rivalcfg.git )
 
 git clone https://github.com/flozz/rivalcfg.git
@@ -6,11 +7,14 @@ sudo pip install .
 sudo rivalcfg --sensitivity1=400
 sudo rivalcfg --sensitivity2=400
 sudo rivalcfg --update-udev
-
+___________________________________________________________________________________________________________________
 > Automount secondary drives
-
 In the Application launcher search for Removable drives and open it. Enable automatic mounting of removable media.
-
+___________________________________________________________________________________________________________________
 > https://mymonero.com/  Light XMR Wallet
 Download is a .appimage file. 'Right-click' > Properties > Check the box for "Is Executable".                 
 Double-click > Execute.      
+___________________________________________________________________________________________________________________
+https://github.com/lawl/NoiseTorch
+
+
