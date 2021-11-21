@@ -1,6 +1,6 @@
 Check for system updates in Discover and if there is any apply them.
 
-Go to settings, Click additonal drivers. Change to latest Nvidia driver metapackage. They go up in number for intance 470 is older than 495.
+Go to settings, Click additonal drivers. Change to latest Nvidia driver metapackage. They go up in number for instance 470 is older than 495.
 
 Once that's completed go back into the console and enter the following;
 
