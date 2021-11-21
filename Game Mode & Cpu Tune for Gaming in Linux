@@ -1,5 +1,8 @@
-> sudo apt install meson libsystemd-dev pkg-config ninja-build git libdbus-1-dev libinih-dev build-essential && sudo apt install cpufrequtils && echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && gamemoded libgamemode0:i386 libgamemodeauto0:i386
 
-This insane command checks for or if there is missing common dependencies, makes sure that the CPU is set to performance mode and then runs gamemode. 
+Open the console and paste the following;
 
-Leave the window open and run the desired game.
+sudo apt install meson libsystemd-dev pkg-config ninja-build git libdbus-1-dev libinih-dev build-essential && sudo apt install cpufrequtils && echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && gamemoded libgamemode0:i386 libgamemodeauto0:i386
+
+This command checks for ( and installs missing) common dependencies, makes sure that the CPU is set to performance mode and then runs gamemode. 
+
+Once ready leave the window open and run the desired game.
