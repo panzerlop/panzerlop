@@ -6,3 +6,8 @@ sudo apt install meson libsystemd-dev pkg-config ninja-build git libdbus-1-dev l
 This command checks for ( and installs missing) common dependencies, makes sure that the CPU is set to performance mode and then runs gamemode. 
 
 Once ready leave the window open and run the desired game.
+
+To run it again use;
+
+gamemoded libgamemode0:i386 libgamemodeauto0:i386
+
