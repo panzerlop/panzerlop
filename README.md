@@ -1,3 +1,5 @@
+Welcome to my collection of scripts, fixes and guides for Linux ( using Kubuntu ).
+
 The TASystemSettings.ini is for Rocket League - it makes it sharper and more optimised. 
 
 > Use Lutris to install Epic Games Launcher and then download Rocket League. 
