@@ -9,7 +9,7 @@ _________________________________________________________________
 - 👋 Hi, I’m @panzerlop
 - 👀 I’m interested in writing, coding, gaming & music production
 - 📫 How to reach me ... panzerlop@protonmail.com
-
+- coffee pls; XMR: 42Hnyztrcf62m8b72T5CaGKAvaiEAvWN6EeAvAwCDRxDWczvqGbNqCi9p39J9J74WmThmvAMEeYg9TPxtCc4DJv9HMZZHDr
 _________________________________________________________________
 
 
@@ -31,4 +31,4 @@ _________________________________________________________________
 
 > Graphics Processor: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
 
-xmr: 42Hnyztrcf62m8b72T5CaGKAvaiEAvWN6EeAvAwCDRxDWczvqGbNqCi9p39J9J74WmThmvAMEeYg9TPxtCc4DJv9HMZZHDr
+
