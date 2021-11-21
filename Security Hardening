@@ -1,0 +1,77 @@
+Improving Security 
+
+1. Firewall
+
+Now let’s get some security sorted out.
+Enter the following into the Konsole
+
+	sudo apt-get install ufw
+
+chances are it’s already installed but just incase, that is how one would install ufw which is a firewall, this blocks connections with a set of rules to help stop bad actors attacking your system, you can also enable the firewall in Kubuntu in the system settings menu if you prefer to do it the graphical way, here’s my recommended commands for a fresh install configuration of the firewall, just copy each one and put it into the Konsole. 
+
+To the right you can see an example of what it looks like to configure in the ‘System Settings’ via GUI ( Graphical User Interface ).
+
+First line can be ignored depending if you want a full log of events or not.
+
+	sudo ufw logging full
+	sudo ufw default deny incoming
+	sudo ufw default deny outgoing
+	sudo ufw allow out 123/udp
+	sudo ufw allow out http
+	sudo ufw allow out https
+	sudo ufw allow out ftp
+	sudo ufw default allow outgoing
+	sudo ufw --force enable
+	sudo ufw enable
+
+2. Disable unneeded services
+
+If you don’t need FTP services etc running on your machine I recommend removing them with this one liner; 
+( Note: you can easily install them again later. It’s unlikely they will be on your system by default but it can’t hurt to check).
+
+	sudo apt-get --purge remove xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server
+
+3. Installing fail2ban 
+
+Fail2ban is a decent tool that helps block repeated attacks on your machine to ‘brute-force’ your system in order to gain access qor deny service.
+
+	sudo apt install fail2ban
+
+You may be prompted to accept, type: “y” and then press Enter. You can check the status of fail2ban by entering the following:
+
+	sudo systemctl status fail2ban
+
+4. Anti-Virus
+
+You could pay for ESET NOD32 AV FOR LINUX DESKTOP it’s got some genuinely good features like heuristic scanning with great detection rates however it’s paid software. 
+Sophos also does a CLI (command line interface) AV but it’s a bit confusing to use/install.
+Anyway luckily we have a great basic one called clamAV and can install it like so:
+
+	sudo apt-get install clamav
+	sudo apt-get install clamav-daemon
+
+Antivirus software isn’t as needed on Linux as the large majority of malware and viruses attack Windows however, 
+I still believe it beneficial because even if you had a windows virus sat on a disk it’s nice to know your machine scans it and doesn't pass it on.
+
+5. Configure a better DNS service
+
+Now before we move on to some more software let’s configure our network to use an encrypted DNS. 
+DNS means Dynamic Name Service, it’s sort of like a big index of IP addresses and their related domain name ( E.g https://www.duckduckgo.com ). 
+Some information about you can be leaked by a DNS server so I recommend you use one like Cloudflare. 
+( Read more here:" 2https://developers.cloudflare.com/1.1.1.1/encrypted-dns ).
+ 
+Click on the network button and then right click your active internet connection and open it’s settings. Click ipv4 and select Automatic (Only Addresses) 
+below that setting in the DNS Servers we’ll add the two following:
+
+1.1.1.1
+
+1.0.0.1
+
+Move across to the IPv6 tab and do the same but use the following DNS Servers:
+
+2606:4700:4700::1111 
+2606:4700:4700::1001 
+
+Reboot your computer and login to complete this process.
+
+
