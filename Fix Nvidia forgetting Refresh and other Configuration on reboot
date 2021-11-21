@@ -13,7 +13,16 @@ Click Show Preview and copy the text that shows up.
 
 > Next navigate to /etc/X11/ and open xorg.conf
 
-Now replace the contents of it with the ones we copied from nvidia-settings and save it. 
+OR
+
+> Put the following into the Konsole: *
+
+kate /etc/X11/xorg.conf
+
+
+Once you've done one of the above options replace the contents of xorg.conf with the ones we copied from nvidia-settings and save it. 
 'Kate' ( KDE's Text Editor ) will ask for your password to allow the file to be overwritten.
 
 Done!
+
+* Note for other distro's that don't have kate installed: You will need to a different program name and likely with sudo in front to overwrite the file. 
