@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#right click > properties > permissions > check "Is executable"
+
 TOGGLE=$HOME/.toggle
 
 if [ ! -e $TOGGLE ]; then
