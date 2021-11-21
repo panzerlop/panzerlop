@@ -16,5 +16,8 @@ Download is a .appimage file. 'Right-click' > Properties > Check the box for "Is
 Double-click > Execute.      
 ___________________________________________________________________________________________________________________
 https://github.com/lawl/NoiseTorch
+___________________________________________________________________________________________________________________
 
+sudo apt install -y p7zip-full p7zip-rar 
+sudo apt install -y unrar
 
