@@ -1,0 +1,19 @@
+In the console type;
+
+sudo X -configure
+
+then 
+
+nvidia-settings
+
+Configure your monitor(s) settings.
+click apply and then "Save to X conifiguration file"
+
+Click Show Preview and copy the text that shows up.
+
+> Next navigate to /etc/X11/ and open xorg.conf
+
+Now replace the contents of it with the ones we copied from nvidia-settings and save it. 
+'Kate' ( KDE's Text Editor ) will ask for your password to allow the file to be overwritten.
+
+Done!
