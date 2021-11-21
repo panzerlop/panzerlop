@@ -12,3 +12,5 @@ sudo rivalcfg --update-udev
 In the Application launcher search for Removable drives and open it. Enable automatic mounting of removable media.
 
 > https://mymonero.com/  Light XMR Wallet
+Download is a .appimage file. 'Right-click' > Properties > Check the box for "Is Executable".                 
+Double-click > Execute.      
