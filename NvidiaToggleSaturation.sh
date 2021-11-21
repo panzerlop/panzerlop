@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#right click > properties > permissions > check "Is executable"
-
 TOGGLE=$HOME/.toggle
 
 if [ ! -e $TOGGLE ]; then
@@ -11,3 +9,6 @@ else
     rm $TOGGLE
     nvidia-settings -a DigitalVibrance=100
 fi
+
+#  right click > properties > permissions > check "Is executable"
+
