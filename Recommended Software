@@ -20,4 +20,6 @@ ________________________________________________________________________________
 
 sudo apt install -y p7zip-full p7zip-rar 
 sudo apt install -y unrar
-
+sudo apt install -y vlc
+&
+Bunch of Plasma FIxes here https://zren.github.io/kde/
