@@ -58,7 +58,7 @@ I still believe it beneficial because even if you had a windows virus sat on a d
 Now before we move on to some more software let’s configure our network to use an encrypted DNS. 
 DNS means Dynamic Name Service, it’s sort of like a big index of IP addresses and their related domain name ( E.g https://www.duckduckgo.com ). 
 Some information about you can be leaked by a DNS server so I recommend you use one like Cloudflare. 
-( Read more here:" 2https://developers.cloudflare.com/1.1.1.1/encrypted-dns ).
+( Read more here:" https://developers.cloudflare.com/1.1.1.1/encrypted-dns ).
  
 Click on the network button and then right click your active internet connection and open it’s settings. Click ipv4 and select Automatic (Only Addresses) 
 below that setting in the DNS Servers we’ll add the two following ( Cloudflare DNS) :
