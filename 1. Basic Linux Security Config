@@ -11,16 +11,9 @@ Xhances are it’s already installed but just incase, that is how one would inst
 
 First line can be ignored depending if you want a full log of events or not.
 
-	sudo ufw logging full
-	sudo ufw default deny incoming
-	sudo ufw default deny outgoing
-	sudo ufw allow out 123/udp
-	sudo ufw allow out http
-	sudo ufw allow out https
-	sudo ufw allow out ftp
-	sudo ufw default allow outgoing
-	sudo ufw --force enable
-	sudo ufw enable
+sudo ufw logging full && sudo ufw default deny incoming && sudo ufw default deny outgoingg && sudo ufw allow out 123/udp g && sudo ufw allow out http g && sudo ufw allow out https g && sudo ufw allow out ftpg && sudo ufw default allow outgoing &&	sudo ufw --force enable
+
+sudo ufw enable
 
 2. Disable unneeded services
 
