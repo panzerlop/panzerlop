@@ -7,11 +7,17 @@ Enter the following into the Konsole
 
 	sudo apt-get install ufw
 
-Xhances are it’s already installed but just incase, that is how one would install ufw which is a firewall, this blocks connections with a set of rules to help stop bad actors attacking your system, you can also enable the firewall in Kubuntu in the system settings menu if you prefer to do it the graphical way, here’s my recommended commands for a fresh install configuration of the firewall, just copy each one and put it into the Konsole. 
+Chances are it’s already installed but just incase, that is how one would install ufw which is a firewall, this blocks connections with a set of rules to help stop bad actors attacking your system, you can also enable the firewall in Kubuntu in the system settings menu if you prefer to do it the graphical way, here’s my recommended commands for a fresh install configuration of the firewall, just copy each one and put it into the Konsole. 
 
-First line can be ignored depending if you want a full log of events or not.
+First this can be used uf you want full events logs from the firewall.
 
-sudo ufw logging full && sudo ufw default deny incoming && sudo ufw default deny outgoingg && sudo ufw allow out 123/udp g && sudo ufw allow out http g && sudo ufw allow out https g && sudo ufw allow out ftpg && sudo ufw default allow outgoing &&	sudo ufw --force enable
+sudo ufw logging full
+
+Here's the one line command I've made to set good basic settings for the firewall;
+
+sudo ufw default deny incoming && sudo ufw default deny outgoingg && sudo ufw allow out 123/udp g && sudo ufw allow out http g && sudo ufw allow out https g && sudo ufw allow out ftpg && sudo ufw default allow outgoing &&	sudo ufw --force enable
+
+And finally;
 
 sudo ufw enable
 
