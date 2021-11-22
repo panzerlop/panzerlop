@@ -1,4 +1,5 @@
 Lutris already installed as shown in previous documents
+
 (
 
 https://github.com/panzerlop/panzerlop/blob/main/Lutris%20&%20Epic%20Games%20&%20Rocket%20League%20Install%20with%20sharpening%20(%20AA%20fix)%20and%20Performance%20Fixes
@@ -7,7 +8,7 @@ https://github.com/panzerlop/panzerlop/blob/main/Lutris%20&%20Epic%20Games%20&%2
 
 So I used the Lutris website to click the latest installer.
 
-https://lutris.net/games/grand-theft-auto-v/
+( https://lutris.net/games/grand-theft-auto-v/ )
 
 In Lutris right click the game and then go 'Runner Options'. Enable AMD FidelityFX Siper Resolution (FSR) - this can help improve performance.
 
@@ -15,13 +16,14 @@ DO NOT PUT THIS GAME ONTO DX11, LEAVE IT ON DX 10.
 
 1660ti + 3600x Reccomended Settings;
 
-> Graphics:
+> Graphics settings in-game.
+
 - Direct X VErsion: Dirext X 10
 - FXAA - On ( to preference )
 - Vsync - Off ( to preference )
 - Distance scaling around 7 / 10 on the bar
 - Texture Quality - Very High
-- Shader Quality - Normal
+- Shader Quality - Very High
 - Reflction Quality - Very High
 - Water Quality - Very High
 - particles quality - Normal
@@ -29,10 +31,11 @@ DO NOT PUT THIS GAME ONTO DX11, LEAVE IT ON DX 10.
 - Population Density 8 / 10
 - Population Variety - Full
 - Distance Scaling - 8 / 10
-- Anistropic Filtering - x8
+- Anistropic Filtering - x4
 - Ambient Occulsion - Normal
 - Extended Distance Scaling - 6 / 10
+- Post Effects: Ultra
 
+Fin.
 
-->>> note after an hour the game became a lot more stable in terms of FPS. 
-Otherwise perfectly playable with 0 crashes an hour in single player and the multiplayer mode. 
+Note: I'd be interested to see if the prton verion works better- its great just seems to be amking a ccahce on first playthrough.
