@@ -15,22 +15,24 @@ DO NOT PUT THIS GAME ONTO DX11, LEAVE IT ON DX 10.
 
 1660ti + 3600x Reccomended Settings;
 
-> Graphics settings that feel smooth for me:
+> Graphics:
 - Direct X VErsion: Dirext X 10
-- FXAA On
-- Vsync - off ( to preference )
-- Distance scaling around 7 / 10th of the bar.
+- FXAA - On ( to preference )
+- Vsync - Off ( to preference )
+- Distance scaling around 7 / 10 on the bar
 - Texture Quality - Very High
 - Shader Quality - Normal
 - Reflction Quality - Very High
 - Water Quality - Very High
 - particles quality - Normal
-- soft shadows - Soft
-- Population Density 5 / 6
+- soft shadows - Sharp
+- Population Density 8 / 10
 - Population Variety - Full
-- Distance Scaling - 4 / 6
-- Anistropic Filtering - x4
+- Distance Scaling - 8 / 10
+- Anistropic Filtering - x8
 - Ambient Occulsion - Normal
+- Extended Distance Scaling - 6 / 10
 
-->>> note after anu hour the game became a lot more stable in terms of FPS. 
-Otherwise perfectlt playable with 0 crashes in an entire playhrough.
+
+->>> note after an hour the game became a lot more stable in terms of FPS. 
+Otherwise perfectly playable with 0 crashes an hour in single player and the multiplayer mode. 
