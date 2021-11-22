@@ -7,9 +7,7 @@ Enter the following into the Konsole
 
 	sudo apt-get install ufw
 
-chances are it’s already installed but just incase, that is how one would install ufw which is a firewall, this blocks connections with a set of rules to help stop bad actors attacking your system, you can also enable the firewall in Kubuntu in the system settings menu if you prefer to do it the graphical way, here’s my recommended commands for a fresh install configuration of the firewall, just copy each one and put it into the Konsole. 
-
-To the right you can see an example of what it looks like to configure in the ‘System Settings’ via GUI ( Graphical User Interface ).
+Xhances are it’s already installed but just incase, that is how one would install ufw which is a firewall, this blocks connections with a set of rules to help stop bad actors attacking your system, you can also enable the firewall in Kubuntu in the system settings menu if you prefer to do it the graphical way, here’s my recommended commands for a fresh install configuration of the firewall, just copy each one and put it into the Konsole. 
 
 First line can be ignored depending if you want a full log of events or not.
 
