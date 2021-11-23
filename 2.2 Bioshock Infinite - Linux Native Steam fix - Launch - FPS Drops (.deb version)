@@ -1,0 +1,31 @@
+Why: Old Native port , was never given much love ! Game is avaliable through GOG and will install using Lutris as an alternative.
+
+Issue: Crashing to desktop or running at 2 - 4 fps
+
+Fix:
+
+Right click the game in the Steam Library, select "Properties..."  
+
+Now enable "Force the use of a specific Steam compatability tool" by checking the tickbox next to it. 
+
+In the drop down box underneath, click the option "Steam Linux Runtime".
+
+Navigate to: 
+
+SteamLibrary/steamapps/common/BioShock Infinite/XGame/Config/BaseEngine.ini
+
+^ You can also right click the game and view local files through that contex menu!
+
+Now search for "Poolsize"
+
+set both PoolSize values to 1024 Under the MemoryPools section 
+
+Finally add the following to the games launch options.
+
+Launch Options:
+
+__GL_THREADED_OPTIMIZATIONS=1 %command% 
+
+
+
+Close the settings window, the game may update and hopefully should now run!
