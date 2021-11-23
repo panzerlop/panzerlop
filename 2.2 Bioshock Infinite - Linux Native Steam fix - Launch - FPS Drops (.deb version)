@@ -10,7 +10,14 @@ Now enable "Force the use of a specific Steam compatability tool" by checking th
 
 In the drop down box underneath, click the option "Steam Linux Runtime".
 
-Navigate to: 
+Add the following to the games launch options.
+
+Launch Options:
+
+__GL_THREADED_OPTIMIZATIONS=1 %command% 
+
+
+---> [[! This section may not be the correct . file iniNavigate to: 
 
 SteamLibrary/steamapps/common/BioShock Infinite/XGame/Config/BaseEngine.ini
 
@@ -18,14 +25,20 @@ SteamLibrary/steamapps/common/BioShock Infinite/XGame/Config/BaseEngine.ini
 
 Now search for "Poolsize"
 
-set both PoolSize values to 1024 Under the MemoryPools section 
-
-Finally add the following to the games launch options.
-
-Launch Options:
-
-__GL_THREADED_OPTIMIZATIONS=1 %command% 
-
+set both PoolSize values to 1024 Under the MemoryPools section !]] <---
 
 
 Close the settings window, the game may update and hopefully should now run!
+
+
+!! Due to what seems to be an error with the memory pool you'll find best results with the textures on normal !! 
+the game still looks amazing here's the settings I use ( main ones);
+
+- Texture: Normal
+- Filtering: Ultra
+- Dynamic Shadows: High ( or normal )
+
+fin.
+
+
+
