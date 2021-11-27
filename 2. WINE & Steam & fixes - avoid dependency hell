@@ -19,7 +19,7 @@ sudo apt-key add winehq.key && sudo apt-add-repository 'https://dl.winehq.org/wi
 
 > Type your password and then accept ('Y' then 'Enter') when prompted.
 
-Type winetricks in the Konsole then when the windows appear and you are prompted agree to installl both Mono and Gecko.
+>> Type winetricks in the Konsole then when the windows appear and you are prompted agree to installl both Mono and Gecko.
 
 Install Steam from offical .deb on site. Download it, then open it with Discover, click install in the top right.
 
