@@ -1,0 +1,12 @@
+0.5 Troubleshooting a hanging installer
+
+This section briefly explains the most common problem I’ve seen when installing Kubuntu 20.10
+The few issues I’ve ever ran into during install have been due to badly formatted hard disks or having plugged in Windows drives. 
+Another common trouble shooting step is to use the “Live” option and close the installer when it hangs, re-open it and try again. 
+Check for any unneeded USB’s connected. In the image above you can see I’m using the “Try ubuntu” option from the installation media 
+then have run the KDE Partition manager. I used this to reformat my drive as ext4 after which installation was perfectly smooth the 
+one time I encountered this – be sure to click apply when you’ve made changes. You can try to use this to format or unmount all drives 
+besides the intended install destination ( and install medium ) – this is a great option if you don’t have physical access to remove 
+any drives in order to avoid accidentally breaking them. More details on the KDE Partition manager and how to wipe partitions is 
+available online and later in the guide section 2.2 shows an example of how to unmount disks via Konsole, 
+you can also use Dolphin File Manager and right click the drive > unmount.  
