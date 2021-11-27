@@ -20,6 +20,10 @@ Here's the one line command I've made to set good basic settings for the firewal
 
 sudo ufw default deny incoming && sudo ufw default deny outgoingg && sudo ufw allow out 123/udp g && sudo ufw allow out http g && sudo ufw allow out https g && sudo ufw allow out ftpg && sudo ufw default allow outgoing &&	sudo ufw --force enable
 
+Next let's conmfigure a basic setup for our firewall;
+
+sudo ufw default deny incoming && sudo ufw default deny outgoing && sudo ufw allow out 123/udp && sudo ufw allow out http && sudo ufw allow out https && sudo ufw allow out ftp && sudo ufw default allow outgoing && sudo ufw --force enable  
+	
 And finally;
 
 sudo ufw enable
