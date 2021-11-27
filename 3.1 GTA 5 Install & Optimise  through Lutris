@@ -14,12 +14,13 @@ DO NOT PUT THIS GAME ONTO DX11, LEAVE IT ON DX 10.
 
 > Graphics settings in-game.
 
-- Direct X VErsion: Dirext X 10
+- Direct X VErsion: Dirext X 11
+
 - FXAA - On ( to preference )
 - Vsync - Off ( to preference )
 - Distance scaling around 7 / 10 on the bar
 - Texture Quality - Very High
-- Shader Quality - Very High
+- Shader Quality - High
 - Reflction Quality - Very High
 - Water Quality - Very High
 - particles quality - Normal
