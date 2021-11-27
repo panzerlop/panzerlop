@@ -6,6 +6,7 @@ Next use the following in the console:
 
 sudo apt install pipx
 sudo apt install -y python3-pip python3-setuptools python3-venv
+sudo apt install winetricks cabextract
 python3 -m pip install --user pipx
 pipx install protontricks
 
