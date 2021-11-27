@@ -2,7 +2,7 @@ In the console typethen press enter;
 
 sudo X -configure
 
-ignore the warnings, as long as it makes xord.conf we are good to go.
+ignore the warnings ( at your OWN peril ), as long as it makes xord.conf we are good to go.
 
 then 
 
