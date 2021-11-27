@@ -20,6 +20,7 @@ At the time of writing this, there’s an issue with installing this way out the
       
  	sudo apt install plasma-discover-backend-flatpak
  	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 Reboot and try again – this fixed it for me and having Discover update the system & applications & let you browse thousands of them is super convenient. 
 Again, this is what I mean when I say that you don;t have to sit staring at a Konsole all the time. It’s faster and safer than other OS. 
 
