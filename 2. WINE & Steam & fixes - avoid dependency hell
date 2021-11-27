@@ -6,7 +6,8 @@ Once that's completed go back into the console and enter the following;
 
 sudo dpkg --add-architecture i386
 
-sudo apt install mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 && sudo apt install wget gdebi-core && sudo apt install libtcmalloc-minimal4 && sudo apt install libgtk2.0-0:i386
+
+sudo apt install mesa-vulkan-drivers libglx-mesa0:i386 libgl1-mesa-glx:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 && sudo apt install wget gdebi-core && sudo apt install libtcmalloc-minimal4 && sudo apt install libgtk2.0-0:i386
 
 sudo apt-get update && sudo apt upgrade
 
