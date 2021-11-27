@@ -37,7 +37,7 @@ Select install Kubuntu from the desktop, follow through the installer steps for 
 
 
 ... Now we come to the Disk Setup stage, if it hangs for over 5 mintes try closing the installer window and re-opening it (if it STILL gets stuck 
-skip ahead to troubleshooting the installer here ).
+skip ahead to troubleshooting the installer https://github.com/panzerlop/panzerlop/blob/main/Stuck%20Kubuntu%20Installer%20Troubleshooting ).
 
 For maximum security I recommend using the LVM with full disk encryption option here – it’s MORE complicated to set it up after install but offers 
 full disk encryption to your files that means a hacker or person with your hard disk would still need to know the password you set to unencrypt the data.
@@ -47,7 +47,10 @@ As mentioned earlier with the keyboard settings - I’ve had issues before where
 THIS CAN EASILY BE FIXED BEFORE YOU RUN THE INSTALLER FROM THE LIVE DISK.
 
 If you don’t care about the disk being encrypted then just select guided install with LVM or the default guided option. 
-The Guided LVM option without encryption has seemed to have less kinks to iron out however I’ve used this guide step by step to set it up and it’s been bug-free for weeks. LVM stands for Logical Volume Management and makes it easy to resize partitions (Partitions basically put are allocated blocks of space on your computers storage- sometimes people resize them to make space for a second OS on the same disk etc).
+The Guided LVM option without encryption has seemed to have less kinks to iron out however I’ve used this guide step by step to set it up and 
+it’s been bug-free for weeks. LVM stands for Logical Volume Management and makes it easy to resize partitions 
+(Partitions basically put are allocated blocks of space on your computers storage- sometimes people resize them to make space for a second OS 
+on the same disk etc).
 
 BE SURE TO SELECT THE CORRECT DISK BEFORE YOU CLICK ANYTHING ELSE ! 
 
