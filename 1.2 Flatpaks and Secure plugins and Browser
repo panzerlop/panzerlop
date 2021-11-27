@@ -1,0 +1,74 @@
+
+
+Whilst the default browser of Firefox is a good open-sourced projects it’s caused a stir with some of the development choices as of late, 
+luckily there is a great fork of the Firefox code which has many many built in security optimisations ( seriously there’s loads ) It’s called Librewolf.
+
+https://librewolf-community.gitlab.io/
+
+Open your konsole and use the following command to install it, or you may simply go to the flathub page and click install !
+
+	flatpak install flathub io.gitlab.librewolf-community
+
+If you go to the flathub it’s a good time to integrate support in Discover for Flatpaks, this helps aid ensuring you’re always updated. 
+https://flathub.org/apps/details/io.gitlab.librewolf-community
+Click the ‘Install’ button and open with Discover, if this is the first time you are installing a flatpak you’ll see this screen, click the install button.
+
+Once installed, click run then restart your PC or log out and in from your session.
+
+Now when you go back to the flathub site you’ll be able to click install and see the correct program come up in Discorver.
+At the time of writing this, there’s an issue with installing this way out the box but it can be quickly fixed in the Konsole with the following:
+      
+ 	sudo apt install plasma-discover-backend-flatpak
+ 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+Reboot and try again – this fixed it for me and having Discover update the system & applications & let you browse thousands of them is super convenient. 
+Again, this is what I mean when I say that you don;t have to sit staring at a Konsole all the time. It’s faster and safer than other OS. 
+
+If you do not wish to use Librewolf all the time then I recommend you install the uBlock Origin plug-in (pre-installed with Librewolf) and the plug-ins I’ll 
+be talking about next;
+
+uBlock Origin is a great open sourced ad-blocker that is low on system resources.
+
+Please ensure any Firefox add-ons you get are from the official addons.mozilla.org and don’t install too many un-neccecary ones – 
+plug-ins are a big attack vector for bad actors.
+
+Next install Decentraleyes as described on the plugin’s page
+ 
+“Protects you against tracking through "free", centralized, content delivery. It prevents a lot of requests from reaching networks like Google Hosted Libraries
+and serves local files to keep sites from breaking. Complements regular content blockers.”
+
+next up is HTTPS everywhere by the Electronic Fronteir Foundation, it enforces the use of Secure HTTP across the web – this avoids leaking information to snoopers.
+
+https://www.eff.org/deeplinks/2021/09/https-actually-everywhere
+
+Librewolf automatically forgets “cookies” after it’s closed, these are little bits of metadata that remember where you’re logged in and can also be a security 
+concern – if you don’t like re-logging in to things I recommend you manually clear your cookies daily or weekly in Firefox or installing a plug-in to do the same.
+
+For quality of life in Librewolf I recommend installing the “I don't care about cookies by Kiko”  plug-in or else you’re going to be clicking accept all a LOT 
+in the EU.
+
+Now VPN time, the most anonymous use and best services I can recommend would be Mullivad for a paid ( takes Bitcoin payment, no account just a randomly 
+generated number to input ) or ProtonVPN free but it’s limited and I can’t vouch for it – Protonmail however is often recommended as an encrypted alternative 
+to G*ogle Mail and is completely free! 
+
+Installing Mullivad in Kubuntu is easy simply download the .deb package and open it with Discover then click install. ( Note you may need to go to your 
+download folder and right click > open with > select Discover )
+
+Whatever VPN you use, for maximum security check they have a “Kill-Switch” this means that if your connection to the VPN disconnects the VPN software 
+will block your internet – this stops accidental information leaks about you.
+
+
+You are already much safer than before but remember to practice good online safety at all times regardless. 
+
+- Verify your sources for programs, search for user feedback. Check the MD5 hash of downloaded programs.
+
+- Always check you are on the official website you are trying to access.
+
+- Do not use your VPN to log into things such as Facebook that may be associated with your unmasked IP or real name / email / phone number.
+
+- Avoid Facebook, Google and Amazon services in general if it can be helped.
+
+- Be smart, always second-think if you trust the provider of software and web services before using them.
+
+- Use an encrypted password manager like https://keepassxc.org/ to store passwords and use different ones for different sites.
+
+For more scrutinised and recommended security software visit https://www.privacytools.io
