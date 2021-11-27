@@ -36,7 +36,7 @@ Next install Decentraleyes as described on the plugin’s page
 “Protects you against tracking through "free", centralized, content delivery. It prevents a lot of requests from reaching networks like Google Hosted Libraries
 and serves local files to keep sites from breaking. Complements regular content blockers.”
 
-next up is HTTPS everywhere by the Electronic Fronteir Foundation, it enforces the use of Secure HTTP across the web – this avoids leaking information to snoopers.
+Next up is HTTPS everywhere by the Electronic Fronteir Foundation, it enforces the use of Secure HTTP across the web – this avoids leaking information to snoopers.
 
 https://www.eff.org/deeplinks/2021/09/https-actually-everywhere
 
@@ -56,19 +56,5 @@ download folder and right click > open with > select Discover )
 Whatever VPN you use, for maximum security check they have a “Kill-Switch” this means that if your connection to the VPN disconnects the VPN software 
 will block your internet – this stops accidental information leaks about you.
 
-
-You are already much safer than before but remember to practice good online safety at all times regardless. 
-
-- Verify your sources for programs, search for user feedback. Check the MD5 hash of downloaded programs.
-
-- Always check you are on the official website you are trying to access.
-
-- Do not use your VPN to log into things such as Facebook that may be associated with your unmasked IP or real name / email / phone number.
-
-- Avoid Facebook, Google and Amazon services in general if it can be helped.
-
-- Be smart, always second-think if you trust the provider of software and web services before using them.
-
-- Use an encrypted password manager like https://keepassxc.org/ to store passwords and use different ones for different sites.
 
 For more scrutinised and recommended security software visit https://www.privacytools.io
