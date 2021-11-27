@@ -1,6 +1,8 @@
 In the console typethen press enter;
 
-sudo X -configure, ignore the warnings, as long as it makes xord.conf we are good to go.
+sudo X -configure
+
+ignore the warnings, as long as it makes xord.conf we are good to go.
 
 then 
 
