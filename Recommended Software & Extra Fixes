@@ -23,3 +23,7 @@ sudo apt install -y unrar
 sudo apt install -y vlc
 &
 Bunch of Plasma FIxes here https://zren.github.io/kde/
+
+To re-map broken keys or for any other fault I reccomend this;
+
+https://github.com/sezanzeb/key-mapper/releases
