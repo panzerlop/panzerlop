@@ -19,11 +19,20 @@ _________________________________________________________________
 _________________________________________________________________
 
 > Operating System: Kubuntu 21.10
+> 
 > KDE Plasma Version: 5.23.3
+> 
 > KDE Frameworks Version: 5.88.0
+> 
 > Qt Version: 5.15.2
+> 
 > Kernel Version: 5.15.0-5.2-liquorix-amd64 (64-bit)
+> 
 > Graphics Platform: X11
+> 
 > Processors: 12 × AMD Ryzen 5 3600X 6-Core Processor
+> 
 > Memory: 23.5 GiB of RAM
+> 
 > Graphics Processor: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
+> 
