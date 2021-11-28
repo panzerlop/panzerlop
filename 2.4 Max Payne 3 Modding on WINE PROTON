@@ -57,4 +57,8 @@ Open downloaded 7zip then paste the "pc" fderfiles into the Max Payne 3 Folder (
 
 To enable FSR add the following to the Launch Options ( this works for all WINE Proton games ).
 
+WINE_FULLSCREEN_FSR=1 %command%
+
+Other variables:
+
 WINE_FSR_OVERRIDE=1 WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=1 %command%
