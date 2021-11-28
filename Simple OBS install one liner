@@ -1,5 +1,5 @@
  
- This covers everything you need to just get OBS up and running;
+ This covers everything you need to just get OBS up and running ( make sure you're using the proper graphics driver ) ;
  
  sudo apt install ffmpeg && 
  sudo apt install v4l2loopback-dkms && 
