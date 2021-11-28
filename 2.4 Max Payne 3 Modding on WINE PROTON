@@ -1,0 +1,60 @@
+Install Max Payne 3 and run it at least once with Steam Proton, I used Experimental.
+
+MODS:
+
+> ( Max Payne III Realistic Blood MOD )
+
+https://www.nexusmods.com/maxpayne3/mods/19?tab=files
+
+Download the zip file.
+
+https://openiv.com/
+
+Download OpenIV and run it using WINE program loader.
+
+Select Max Payne 3, Input the Location where the game is installed
+
+Here is an example:
+
+Z:\media\redacted\Data\SteamLibrary\steamapps\common\Max Payne 3\Max Payne 3\
+
+Open OpenIV, via desktop shortcut if one was made or by searching in the application launcher.
+
+Drop the files from the zip inside the Max Payne 3 file like so:
+
+Drop bloodfx.dat and charbloodfx.dat onto \Max Payne 3\common.rpf\data\effects
+
+Then drop fxprojtex.wtd on \Max Payne 3\pc.rpf\textures
+
+close edit mode.
+
+
+> (Remove (Most) Flashy Screen Effects)
+
+https://www.nexusmods.com/maxpayne3/mods/8?tab=description
+
+download and extract the .oiv from the zip file
+
+Go to OpenIV then > Tools > select -> package installer
+
+load the downloaded file
+
+the installer looks glitchy bit I Just clicked accept a few times and waited til it was done installing.
+
+> ( Colored 3D Weapon Icons ) 
+
+https://www.nexusmods.com/maxpayne3/mods/12
+
+In OpenIV goto pc.rpf\textures\
+
+Enable edit mode then drop payne_weapons_white.wtd here.
+
+https://drive.google.com/file/d/1qFUxnpKcmpzBgRIeUd2HkPY6dvhfM_op
+
+Open downloaded 7zip then paste the "pc" fderfiles into the Max Payne 3 Folder ( /steamapps/common/Max Payne 3/Max Payne 3/ )
+
+
+
+To enable FSR add the following to the Launch Options ( this works for all WINE Proton games ).
+
+WINE_FSR_OVERRIDE=1 WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=1 %command%
