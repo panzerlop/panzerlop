@@ -59,3 +59,9 @@ will block your internet – this stops accidental information leaks about you.
 
 
 For more scrutinised and recommended security software visit https://www.privacytools.io
+
+Quick commands for Tor Browser;
+
+sudo add-apt-repository ppa:micahflee/ppa
+sudo apt update 
+sudo apt install torbrowser-launcher
