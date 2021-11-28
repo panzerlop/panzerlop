@@ -4,4 +4,6 @@ sudo add-apt-repository ppa:kubuntu-ppa/backports && sudo apt-get update && sudo
 
 sudo apt-get update && sudo apt upgrade
 
-reboot.
+After that, open Discover and see if there are still any updates to do, apply them.
+
+reboot!
