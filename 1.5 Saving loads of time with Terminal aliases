@@ -18,6 +18,10 @@ Alias examples:
 > Display our current folder;
 
   alias path='echo -e ${PATH//:/\\n}'
+  
+> List files inside it
+
+  alias list='printf '%s\n' * '
 
 > Easy alias to update software;
 
