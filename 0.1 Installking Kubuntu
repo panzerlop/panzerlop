@@ -49,7 +49,7 @@ full disk encryption to your files that means a hacker or person with your hard 
 
 Warning about passwords on crypt: on boot you’ll have to type this password to gain any access at all to your system, 
 As mentioned earlier with the keyboard settings - I’ve had issues before where the installer in live mode is using by default US language keyboard.
-THIS CAN EASILY BE FIXED BEFORE YOU RUN THE INSTALLER FROM THE LIVE DISK.
+THIS CAN EASILY BE FIXED BEFORE YOU RUN THE INSTALLER FROM THE LIVE DISK AS MENTIONED EARLIER.
 
 If you don’t care about the disk being encrypted then just select guided install with LVM or the default guided option. 
 The Guided LVM option without encryption has seemed to have less kinks to iron out however I’ve used this guide step by step to set it up and 
