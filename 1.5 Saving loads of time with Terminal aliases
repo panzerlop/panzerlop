@@ -1,0 +1,10 @@
+Open the console and type the following;
+
+kate ~/.bash_aliases
+
+In this file you can write commands that will run in the Terminal with a custom phrase such as;
+
+alias myip='curl ipinfo.io/ip'
+
+alias gameset= echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && nvidia-settings -a [gpu:0]/GpuPowerMizerMode=1 && gamemoded libgamemode0:i386 libgamemodeauto0:i386
+
