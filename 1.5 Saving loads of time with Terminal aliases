@@ -2,7 +2,9 @@ Open the console and type the following;
 
 kate ~/.bash_aliases
 
-In this file you can write commands that will run in the Terminal with a custom phrase such as;
+In this file you can write commands that will run in the Terminal with a custom phrase.
+
+Alias examples:
 
 alias myip='curl ipinfo.io/ip'
 
@@ -13,3 +15,11 @@ In order to move up a folder simply by typing ".." we can use the following;
 alias cd..='cd ..'
 alias ..='cd ..'
 
+Display our current folder;
+
+alias path='echo -e ${PATH//:/\\n}'
+
+
+Easy alias to update software;
+
+alias update=' sudo apt-get update && sudo apt-get upgrade && flatpak update'
