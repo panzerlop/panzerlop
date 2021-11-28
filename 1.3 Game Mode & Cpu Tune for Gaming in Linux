@@ -15,7 +15,8 @@ To run it again use;
 
 gamemoded libgamemode0:i386 libgamemodeauto0:i386
 
-You can also add this to any Steam game using Proton to enable FSR put the following into the games launch options;
+You can also add this to any Steam game using Proton to enable FSR put the following into the games launch options 
+or tweak the launcher for it in Lutris;
 
 WINE_FSR_OVERRIDE=1 WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=1 %command%
 
