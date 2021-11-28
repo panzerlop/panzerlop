@@ -8,4 +8,8 @@ alias myip='curl ipinfo.io/ip'
 
 alias gameset=' echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && nvidia-settings -a [gpu:0]/GpuPowerMizerMode=1 && gamemoded libgamemode0:i386 libgamemodeauto0:i386 ' 
 
+In order to move up a folder simply by typing ".." we can use the following;
+
+alias cd..='cd ..'
+alias ..='cd ..'
 
