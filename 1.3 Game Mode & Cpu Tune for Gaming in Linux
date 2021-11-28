@@ -15,3 +15,8 @@ To run it again use;
 
 gamemoded libgamemode0:i386 libgamemodeauto0:i386
 
+You can also add this to any Steam game using Proton to enable FSR put the following into the games launch options;
+
+WINE_FSR_OVERRIDE=1 WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=1 %command% 
+
+"AMD Fidelity FX Super Resolution (FSR) is a type of rendering technique that looks to boost framerates in games and enable quality high-resolution gaming."
