@@ -23,18 +23,6 @@ Alias examples:
 
   alias update=' sudo apt-get update && sudo apt-get upgrade && flatpak update'
 
-> Check Total Disk-space;
-
-  alias diskspace='df -hl --total | grep total'
-
-> Network Diagnostic reporting;
-
-  alias trace='mtr --report-wide --curses $1'
-
-> Analyse network packets;
-
-  alias killtcp='sudo ngrep -qK 1 $1 -d wlan0'
-
 > CPU Govener to performance, Nvidia settings to Performance & Enables Gamemode
 
   alias gameset=' echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && nvidia-settings -a [gpu:0]/GpuPowerMizerMode=1 && gamemoded libgamemode0:i386 libgamemodeauto0:i386 ' 
