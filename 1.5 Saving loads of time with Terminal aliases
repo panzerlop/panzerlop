@@ -1,6 +1,6 @@
 Open the console and type the following;
 
-kate ~/.bash_aliases
+  kate ~/.bash_aliases
 
 In this file you can write commands that will run in the Terminal with a custom phrase.
 
@@ -27,13 +27,18 @@ Alias examples:
 
   alias diskspace='df -hl --total | grep total'
 
-Network Diagnostic reporting;
+> Network Diagnostic reporting;
 
-alias trace='mtr --report-wide --curses $1'
+  alias trace='mtr --report-wide --curses $1'
 
-alias killtcp='sudo ngrep -qK 1 $1 -d wlan0'
-alias usage='ifconfig wlan0 | grep 'bytes''
-alias connections='sudo lsof -n -P -i +c 15'
+> Analyse network packets;
 
+  alias killtcp='sudo ngrep -qK 1 $1 -d wlan0'
 
-alias gameset=' echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && nvidia-settings -a [gpu:0]/GpuPowerMizerMode=1 && gamemoded libgamemode0:i386 libgamemodeauto0:i386 ' 
+> See all IP's connected to your network ( first: sudo apt install nmap );
+
+  alias netcheck='nmap -sP $(ip -o addr show | grep inet  | grep eth | cut -d  -f 7)'
+
+> CPU Govener to performance, Nvidia settings to Performance & Enables Gamemode
+
+  alias gameset=' echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && nvidia-settings -a [gpu:0]/GpuPowerMizerMode=1 && gamemoded libgamemode0:i386 libgamemodeauto0:i386 ' 
