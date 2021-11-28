@@ -1,0 +1,7 @@
+In the console;
+
+sudo add-apt-repository ppa:kubuntu-ppa/backports && sudo apt-get update && sudo apt-get upgrade && sudo ppa-purge ppa:kubuntu-ppa/backports
+
+sudo apt-get update && sudo apt upgrade
+
+reboot.
