@@ -65,3 +65,5 @@ Quick commands for Tor Browser;
 sudo add-apt-repository ppa:micahflee/ppa
 sudo apt update 
 sudo apt install torbrowser-launcher
+
+Go to settings or put ( about:preferences#privacy ) in the web adress and press enter. Select "Safest".
