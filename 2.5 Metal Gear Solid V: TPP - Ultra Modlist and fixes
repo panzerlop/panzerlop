@@ -1,0 +1,65 @@
+Run with Steam Proton. Experimental works perfectly at time of writing.
+
+41 Mods-list, stable, installed at the same time using WINE to install the mods throiugh Snakebite.
+
+Better Irons.mgsv
+Beyond Ultra - Alternative - With FXAA.mgsv
+CamoConsistency_v0_3.mgsv
+Curvier Meg.mgsv
+Curvier Sneaking Suit.mgsv
+DS4_native.mgsv
+fal and sig 550.mgsv
+Female Hair Shadows.mgsv
+Ground Zeroes Rain Filter.mgsv
+Handguns - Better Iron Sights.mgsv
+HostageRescue_Sideop_Mod.mgsv
+ICBINR - High Contrast.mgsv
+Immersive S-Plus-Plus Staff And Recruits.mgsv
+Increase Diamond Value.mgsv
+Infinite Heaven.mgsv
+Interrogation Item Drops.mgsv
+Jupiter Venom.mgsv
+Modern Camo Pack (for Camo Consistency).mgsv
+More Animals Afghanistan 1.1.mgsv
+More Animals Africa 1.1.mgsv
+More Effective CQC by Blejky.mgsv
+NFFH 2.4.mgsv
+PW Rescue 01 b14r1.mgsv
+QuietBlackHair.mgsv
+QuietBlueEyes.mgsv
+Quiet_HospitalDisguise.mgsv
+Quiet Shower (Infinite Heaven v237 Version).mgsv
+tmotg_v0.2.mgsv
+UAZ_NewWheels.mgsv
+Ural_NewWheels.mgsv
+Curvier Boss Suit Custom Jiggle.mgsv
+weaponlore.mgsv
+Weather - More Phenomena.mgsv
+Where Sahelanthropus Headed Subtitles v2.4.mgsv
+XM177E2 and variants pack.mgsv
+yet_another_resource_mod.mgsv
+DD Staff Swimwear Tactical Edition.mgsv
+NOV2021pack.mgsv
+Revampped hair for girls ;).mgsv
+Fixed Light Gimmicks b3.mgsv
+CurvierGob.mgsv
+Quiet Def Battle Dress.mgsv
+
+Install Snakebite, run it's installer with WINE loader ( WINE install here:
+https://github.com/panzerlop/panzerlop/blob/main/2.%20WINE%20Install%20%26%20Steam%20%26%20avoid%20Steam%20dependency%20hell )
+
+Load Snakebite from the Application Launcher, drag in the window selection when you find your mod files to select them all at once.
+
+Apply and wait for install.
+
+Optional FSR in the Steam launch options.;
+
+WINE_FSR_OVERRIDE=1 WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=1 %command%
+
+Unocking the FPS;
+
+/home/redacted/.steam/steam/userdata/1067551028/287700/local/
+
+in TPP_GRAPHICS_CONFIG
+
+Set "framerate_control" to "Variable"
