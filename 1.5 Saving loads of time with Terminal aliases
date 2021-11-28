@@ -23,3 +23,5 @@ alias path='echo -e ${PATH//:/\\n}'
 Easy alias to update software;
 
 alias update=' sudo apt-get update && sudo apt-get upgrade && flatpak update'
+
+alias diskspace='df -hl --total | grep total'
