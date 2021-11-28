@@ -6,22 +6,34 @@ In this file you can write commands that will run in the Terminal with a custom 
 
 Alias examples:
 
-alias myip='curl ipinfo.io/ip'
+> Show IP;
+
+  alias myip='curl ipinfo.io/ip'
+
+> In order to move up a folder simply by typing ".." we can use the following;
+
+  alias cd..='cd ..'
+  alias ..='cd ..'
+
+> Display our current folder;
+
+  alias path='echo -e ${PATH//:/\\n}'
+
+> Easy alias to update software;
+
+  alias update=' sudo apt-get update && sudo apt-get upgrade && flatpak update'
+
+> Check Total Disk-space;
+
+  alias diskspace='df -hl --total | grep total'
+
+Network Diagnostic reporting;
+
+alias trace='mtr --report-wide --curses $1'
+
+alias killtcp='sudo ngrep -qK 1 $1 -d wlan0'
+alias usage='ifconfig wlan0 | grep 'bytes''
+alias connections='sudo lsof -n -P -i +c 15'
+
 
 alias gameset=' echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils && sudo /etc/init.d/cpufrequtils restart && nvidia-settings -a [gpu:0]/GpuPowerMizerMode=1 && gamemoded libgamemode0:i386 libgamemodeauto0:i386 ' 
-
-In order to move up a folder simply by typing ".." we can use the following;
-
-alias cd..='cd ..'
-alias ..='cd ..'
-
-Display our current folder;
-
-alias path='echo -e ${PATH//:/\\n}'
-
-
-Easy alias to update software;
-
-alias update=' sudo apt-get update && sudo apt-get upgrade && flatpak update'
-
-alias diskspace='df -hl --total | grep total'
