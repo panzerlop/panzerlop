@@ -8,13 +8,11 @@ https://lutris.net/games/grand-theft-auto-v/
 
 In Lutris right click the game and then go 'Runner Options'. Enable AMD FidelityFX Siper Resolution (FSR) - this can help improve performance.
 
-DO NOT PUT THIS GAME ONTO DX11, LEAVE IT ON DX 10.
-
-1660ti + 3600x Reccomended Settings;
+1660ti Nvidia + AMD 3600x Reccomended Settings ( 60 lowest with 100+ highs );
 
 > Graphics settings in-game.
 
-- Direct X VErsion: Dirext X 11
+- Direct X Version: Dirext X 11
 
 - FXAA - On ( to preference )
 - Vsync - Off ( to preference )
