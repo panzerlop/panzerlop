@@ -36,5 +36,8 @@ Right click the game and set the launch options "-nojoy -novid"
 
 Fin.
 
+Extra note: I had this game randomly appear uninstalled anud wouldn't write an update, fixed this by removing it and it's corresponmding
+configurtation in Steamapps > Compdata ( The number is the same as the URL shows on the St eam Store ( 730 ) ) - then follow the guide again 
+from line 12.
 
 
