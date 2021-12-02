@@ -1,4 +1,4 @@
-0. Why Linux? Why care?
+# Why Linux? Why care?
 
 Linux is an open source project that has been developed since 1991, the vast majority of internet infrastructure and cloud services run on systems based from 
 Linux – it’s free and secure. 
@@ -10,8 +10,7 @@ There has been huge development recently for the gaming end on Linux with EAC su
 over 16,000 Windows games to Linux – their version of Linux for Steam Deck uses KDE as well as Kubuntu does so I predict it’ll only get better. 
 
 Linux MINT is also a great friendly distribution for new users but it’s main flavour Cinnamon performs badly in graphical applications sadly ( uses mutter ) 
-- it is also based from Ubuntu but comes packaged with it’s own software(s) which tend to have a little less information online - 
-a lot of this guide still applies to all Debian derivitives. 
+ - it is also based from Ubuntu but comes packaged with it’s own software(s) which tend to have a little less information online - a lot of this guide still applies to all Debian derivitives. 
 
 Societies all around the world have been abusing the right to privacy for a long time and it’s only been getting worse with the introduction of the 
 Snoopers Charter in the UK and secret two year trials in collaboration with ISP’s to record every users entire history (as of 2021). 
