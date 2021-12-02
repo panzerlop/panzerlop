@@ -34,3 +34,13 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1633394421
 
 Extra mods for MP1 "Complete FixPack - 2021 Edition" will ned to be installed with WINE
 
+Insteam hover the game select, right click > properties > Local Files > browse
+
+Now use the installer to navigate to you installed game files; for Example mine is:
+
+Data/SteamLibrary/steamapps/common/Max Payne/
+
+The intaller will ask for a directory; which should also resemble this depending on your path.
+
+
+
