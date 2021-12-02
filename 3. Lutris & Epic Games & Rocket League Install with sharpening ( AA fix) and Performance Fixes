@@ -4,7 +4,7 @@ Open your Terminal:
 
 sudo add-apt-repository ppa:lutris-team/lutris && sudo apt update && sudo apt install lutris
 
-Otherwise - Run Lutris...
+ - Run Lutris...
 
 https://lutris.net/games/epic-games-store/
 
