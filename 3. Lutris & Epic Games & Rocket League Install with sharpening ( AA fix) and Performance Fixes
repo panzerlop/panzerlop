@@ -27,4 +27,15 @@ Setting the game to Windowed felt like it had a much lower input latency on my d
 
 I also reccomend you uncheck both options in "Desktop Notifcations" from Epic Launchers 'Settings' because they are glitchy and can hang on screen.
 
+NOte, to change the anti aliasing, incase you need more frames the main settings are here
+change the following:
+
+MaxMultiSamples=8
+
+I'd start with 2 - 4 depenuding on your systemi ^
+
+bAllowD3D9MSAA=true
+
+I also recomend you set the file to read only!
+
 
