@@ -1,4 +1,5 @@
-Welcome to my collection of scripts, fixes and guides for Linux ( using K ubuntu ).
+Welcome to my collection of scripts, fixes and guides for Linux ( using K ubuntu ). Many guides work with a little tweaking under most Debian derivitives.
+
 <b> Files preceded by a number assume previous number has been read and / or completed. </b>
 
 The TASystemSettings.ini is for Rocket League - it makes it sharper and more optimised - fixing the blurry image. 
