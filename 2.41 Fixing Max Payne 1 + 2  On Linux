@@ -1,3 +1,5 @@
+Max payne 2:
+
 Max payne 2 won't run nicely without this mod ( as far as I've gotten it) so give this it a shot:
 
 https://www.moddb.com/mods/payne-evolution/downloads/payne-evolution-enhanced-edition-full-final
@@ -6,10 +8,16 @@ for widescreen also get this mod:
 
 https://www.moddb.com/mods/payne-evolution/downloads/payne-evolution-enhanced-edition-full-final
 
-(^^ See Pervious guides to install Winetricks ^^) 
+(^^ See Pervious guides to install Protontricks ^^) 
 
-!!! PLEASE RUN BOTH GAMES FIRST OR YOU WON@T BE ABLE TO RUN THE FOLLOWING! 
+________________________________________________________________________________________________
+
+(^^ See Pervious guides to install Protontricks ^^) 
+
 protontricks 12150 arial vcrun2019 cjkfonts win10
+
+!!! Now please run Max Payne Then Exit.
+
 protontricks 12140 arial vcrun2019 cjkfonts win10
 
 ^^^ That should be fune but here's another few fixes:
@@ -18,13 +26,13 @@ This should fix the issue if you have no audo:
 
 https://drive.google.com/file/d/188LjaIdjGuiYfp0afWXv7KLo5PMl72T0/view
 
-Open the gmae location  (example)
+Open the gamae location for example;
 
 /media/redacted/Data/SteamLibrary2/steamapps/common/Max Payne 2 The Fall of Max Payne/
 
  >>  you can also click the game in steam and open the game folder the from the properties menu.
 
-^ ensure both zops are extracted to the correct places.
+^ ensure both zip scontents are extracted to the correct places ( "Max Payne 2 The Fall of Max Payne ").
 
 >> Reboot.
 
@@ -35,7 +43,7 @@ These are extra files are fixes for crashes that happen on Winows and Linx;
 https://drive.google.com/file/d/1nPUgYVdj03J1jI0CONMrPit0snFN9P4_/view
 
 
--- Slip the black screen cinematics when it loads and ... and we're done!!!!
+-- Slip the black screen cinematics when it first loads loads and ... and we're done!!!!
 
 
 Fin.
