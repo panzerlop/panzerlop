@@ -38,9 +38,10 @@ Insteam hover the game select, right click > properties > Local Files > browse
 
 Now use the installer to navigate to you installed game files; for Example mine is:
 
-Data/SteamLibrary/steamapps/common/Max Payne/
+..\media\redacted\Data\SteamLibrary2\steamapps\common
 
 The intaller will ask for a directory; which should also resemble this depending on your path.
+
 
 
 
