@@ -12,7 +12,7 @@ https://www.moddb.com/mods/payne-evolution/downloads/payne-evolution-enhanced-ed
 protontricks 12150 arial vcrun2019 cjkfonts win10
 protontricks 12140 arial vcrun2019 cjkfonts win10
 
-^^^ That should be fune but here's another few fixed:
+^^^ That should be fune but here's another few fixes:
 
 This should fix the issue if you have no audo:
 
@@ -24,16 +24,22 @@ Open the gmae location  (example)
 
  >>  you can also click the game in steam and open the game folder the from the properties menu.
 
+^ ensure both zops are extracted to the correct places.
+
 >> Reboot.
 
 >> Almost there! ( Check your input and outputs are configred correctly in Audio settings)
 
-These files are fixes for crashes that happen on Winows and Linx;
+These are extra files are fixes for crashes that happen on Winows and Linx;
 
 https://drive.google.com/file/d/1nPUgYVdj03J1jI0CONMrPit0snFN9P4_/view
 
 
--- Slip the black intro cinematics when it loads and ... we're done!!!!
+-- Slip the black screen cinematics when it loads and ... and we're done!!!!
+
+
+Fin.
+
 
 ____________________________________________________________________________________________________
 
@@ -54,6 +60,4 @@ The intaller will ask for a directory; which should also resemble this depending
 -- WHEN IT FINISHEES -- BEFORE CLICKING NEXT ---- UNSELECT AND DO NOT RUN THE "Sound consversion process it sould be fine now!" 
 ( breaks it as of 02.12.2021 - WINE Staging )
 
-
-Fin.
 
