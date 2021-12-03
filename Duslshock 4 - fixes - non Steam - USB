@@ -1,3 +1,5 @@
+> Turn off PS4 COntroller first (  hold ps button and share)
+
 In The Terminal:
  
 sudo pip install ds4drv
