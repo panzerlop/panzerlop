@@ -1,8 +1,9 @@
 Put the following in the Terminal (If you have logged in but have no application launcher 
 press Ctrl+Alt+T to open the Terminal) and press Enter;
 
-rm ~/.config/plasma-org.kde.plasma.desktop-appletsrc && rm ~/.config/plasmashellrc && rm ~/.config/plasmarc &&
-kquitapp5 plasmashell || killall plasmashell && kstart5 plasmashell
+
+`rm ~/.config/plasma-org.kde.plasma.desktop-appletsrc && rm ~/.config/plasmashellrc && rm ~/.config/plasmarc &&
+kquitapp5 plasmashell || killall plasmashell && kstart5 plasmashell`
 
 This will remove any modifcations you've done to the deksktop like pinned apps & widgets to fix issues with incorrectly displayed Plasma Desktop.
 
