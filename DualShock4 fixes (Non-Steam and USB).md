@@ -10,11 +10,13 @@ sudo ds4drv
 
 ## Ensure Bluetooh is off on your device:
 
-Now hold ps button and share button on the controller until it flashes and connected the USB;
-
-fin.
 
 To test:
 
 `sudo apt-get install jstest-gtk`
+
+
+Now hold ps button and share button on the controller until it flashes and connected the USB;
+
+fin.
 
