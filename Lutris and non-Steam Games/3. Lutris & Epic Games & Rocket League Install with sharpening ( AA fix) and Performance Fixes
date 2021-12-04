@@ -4,7 +4,7 @@ Open your Terminal:
 
 sudo add-apt-repository ppa:lutris-team/lutris && sudo apt update && sudo apt install lutris
 
-Otherwise - Run Lutris...
+ - Run Lutris...
 
 https://lutris.net/games/epic-games-store/
 
@@ -26,5 +26,16 @@ Paste the contents as they are here: https://github.com/panzerlop/panzerlop/blob
 Setting the game to Windowed felt like it had a much lower input latency on my dual-screen setup, so that's worth a try aswell.
 
 I also reccomend you uncheck both options in "Desktop Notifcations" from Epic Launchers 'Settings' because they are glitchy and can hang on screen.
+
+NOte, to change the anti aliasing, incase you need more frames the main settings are here
+change the following:
+
+MaxMultiSamples=8
+
+I'd start with 2 - 4 depenuding on your systemi ^
+
+bAllowD3D9MSAA=true
+
+I also recomend you set the file to read only!
 
 

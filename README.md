@@ -1,4 +1,5 @@
-Welcome to my collection of scripts, fixes and guides for Linux ( using Kubuntu ).
+Welcome to my collection of scripts, fixes and guides for Linux ( using K ubuntu ). Many guides work with a little tweaking under most Debian derivitives.
+
 <b> Files preceded by a number assume previous number has been read and / or completed. </b>
 
 The TASystemSettings.ini is for Rocket League - it makes it sharper and more optimised - fixing the blurry image. 
@@ -7,6 +8,7 @@ The TASystemSettings.ini is for Rocket League - it makes it sharper and more opt
 > > Run Once. Exit.
 > Right click Epic Games Store on Lutris and select 'Browse Files'
 > You need to put the TASystemSettings.ini in /home/USERNAME/Games/epic-games-store/drive_c/users/USERNAME/Documents/My Games/Rocket League/TAGame/Config/ 
+
 > Don't forget where I've written "USERNAME"  Replace it with your own actual username.
 
 That .ini Works on Windows too ( Documents/My Games/Rocket League/TAGame/Config/ ).
