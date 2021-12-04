@@ -21,7 +21,8 @@ against political dissidents and innocent people.
 
 Even if you are politically aligned with your country, imagine if more extreme or contrasting new political sectors of society can inherit the already 
 existing surveillance infrastructure and enforce new rules.
-This then poses the question that perhaps all surveillance systems must be regarded in terms of how they can be abused in the future?
+This then poses the question ;
+# Perhaps all surveillance systems must be regarded in terms of how they can be abused in the future?
 
 There are many people out there complicit in passive agreement through inaction. But I strongly believe every sane person should be willing to 
 give up at least some convenience in order to protect yours and the future of privacy.
