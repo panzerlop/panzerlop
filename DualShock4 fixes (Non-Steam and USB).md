@@ -11,7 +11,7 @@ sudo ds4drv
 ## Ensure Bluetooh is off on your device:
 
 
-To test:
+To test try:
 
 `sudo apt-get install jstest-gtk`
 
