@@ -8,6 +8,11 @@ sudo rivalcfg --sensitivity1=400
 sudo rivalcfg --sensitivity2=400
 sudo rivalcfg --update-udev
 ```
+**Note**: if the sensitivity options don't work, try
+
+`sudo rivalconfig -s 400`
+
+the `-p` flag will also allow you to change the polling rate (mine is 1000Hz).
 
 ## Automount secondary drives
 In the Application launcher search for Removable drives and open it. Enable automatic mounting of removable media.
