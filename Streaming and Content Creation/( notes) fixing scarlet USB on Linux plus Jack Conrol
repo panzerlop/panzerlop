@@ -1,0 +1,63 @@
+I reccomend you use a mainline kernal and propriety driver for it...
+
+https://linuxmusicians.com/viewtopic.php?f=4&t=15747
+
+https://thanede.wordpress.com/2017/07/03/getting-a-focusrite-scarlett-solo-to-work-under-linux-common-issues/
+
+apt install pulseaudio-module-jack
+
+apt install qjackctl
+
+restart
+
+run it
+
+configre
+
+if realtime-privileges is correctly installed and system rebooted
+
+
+change to resolve previous error will be added to this file:
+
+cat /etc/security/limits.d/99-realtime-privileges.conf
+
+https://github.com/raboof/realtimeconfigquickscan
+
+
+
+/etc/security/limits.d/99-realtime-privileges.conf
+
+
+git clone git://github.com/raboof/realtimeconfigquickscan.git && cd realtimeconfigquickscan && perl ./realTimeConfigQuickScan.pl
+
+
+
+sudo apt-get install pulseaudio-module-jack
+
+clean dpkg
+
+pulseaudio --kill
+jack_control  start
+
+jack_control exit
+pulseaudio --start
+
+ps -aux | grep jackd
+kill -9 jacksPID
+
+NOW
+
+sudo apt-get install software-properties-common wget && sudo add-apt-repository ppa:kxstudio-debian/kxstudio && sudo apt-get update && sudo apt-get install kxstudio-repos && sudo apt-get update && sudo apt-get install wineasio
+
+sudo dpkg --configure -a
+
+
+
+MICROSOFT VISUAL C++ 2015 - 2022
+
+usewine tricks install all the c++ redists tobe fae
+this fixe dit for me
+
+curl --silent --show-error \
+https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks --stderr - \
+| grep ^WINETRICKS_VERSION | cut -d '=' -f 2
