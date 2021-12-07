@@ -1,8 +1,7 @@
  
  This covers everything you need to just get OBS up and running ( make sure you're using the proper graphics driver ) ;
  
- sudo apt install ffmpeg && 
- sudo apt install v4l2loopback-dkms && 
- sudo add-apt-repository ppa:obsproject/obs-studio && 
+ sudo apt install ffmpeg && sudo apt install v4l2loopback-dkms && sudo add-apt-repository ppa:obsproject/obs-studio && 
  sudo apt update && sudo apt install obs-studio
  
+Fin.
