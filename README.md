@@ -1,4 +1,4 @@
-Welcome to my collection of scripts, fixes and guides for Linux ( using K ubuntu ). Many guides work with a little tweaking under most Debian derivitives.
+-- This GIT is not dead and will be updated en masses - theres lots changing quickly especially around Steam and the upcoming Valve Deck to keep up with which fixes are appropriate -- Welcome to my collection of scripts, fixes and guides for Linux ( using K ubuntu ). Many guides work with a little tweaking under most Debian derivitives.
 
 <b> Files preceded by a number assume previous number has been read and / or completed. </b>
 
