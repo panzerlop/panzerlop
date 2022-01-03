@@ -28,7 +28,7 @@ sudo apt install -y unrar
 sudo apt install -y vlc
 ```
 
-## Bunch of Plasma Fixes ( may be out-dated ) [here](https://zren.github.io/kde/)
+¬¬!! Bunch of Plasma Fixes ( may be out-dated ) [here](https://zren.github.io/kde/)
 
 
 ## Key remapping
