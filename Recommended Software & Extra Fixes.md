@@ -16,6 +16,8 @@ the `-p` flag will also allow you to change the polling rate (mine is 1000Hz).
 
 ## Automount secondary drives
 In the Application launcher search for Removable drives and open it. Enable automatic mounting of removable media.
+
+## XMR Wallet
 [Light XMR Wallet](https://mymonero.com/)
 Download is a .appimage file. 'Right-click' > Properties > Check the box for "Is Executable".                 
 Double-click > Execute.      
