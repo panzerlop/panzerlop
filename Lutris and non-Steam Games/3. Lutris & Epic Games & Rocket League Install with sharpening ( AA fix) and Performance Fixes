@@ -33,7 +33,7 @@ change the following in TASystemSettings.ini:
 
 MaxMultiSamples=8
 
-I'd start with 2 - 4 depenuding on your systemi ^
+I'd start with 2 - 4 depenuding on your system ^
 
 bAllowD3D9MSAA=true
 
