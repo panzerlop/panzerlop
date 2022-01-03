@@ -8,8 +8,8 @@ sudo add-apt-repository ppa:lutris-team/lutris && sudo apt update && sudo apt in
 
 https://lutris.net/games/epic-games-store/
 
-Since there are currently no uploaded Lutris scripts that do anything other than install the 'Epic Games Store', 
-it makes sense to just use the latest Lutris installer for the 'Epic Games Store'.
+Since there are currently no uploaded Lutris scripts that do anything other than install the unmodded games just get the latest 'Epic Games Store', 
+it makes sense to just use the latest Lutris installer for the 'Epic Games Store' - it seems to install all the required dependencies.
 
 Once it loads and you've logged in to the Epic Launcher download Rocket League.
 
