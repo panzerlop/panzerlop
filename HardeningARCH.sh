@@ -35,6 +35,7 @@
 # might need to run sudo apt-get install -y macchanger or check it's installed here aswell...
 
 # is fail2ban in here? quick note , gotta run
+# is apparmour worth it ? For the average user is firejail not earlier to teach em? 
 
 # anyway back to the show
 
