@@ -30,7 +30,9 @@
 #          macchanger -e $i >/dev/null # Hide the output so it can't be discovered with systemd logs.
 #        done
 
-# is fail2ban in here? quick note 
+# might need to run sudo apt-get install -y macchanger or check it's installed here aswell...
+
+# is fail2ban in here? quick note , gotta run
 
 # anyway back to the show
 
