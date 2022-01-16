@@ -1,7 +1,7 @@
 # Why Linux? Why care?
 
 Linux is an open source project that has been developed since 1991, the vast majority of internet infrastructure and cloud services run on systems based from 
-Linux – it’s free and secure. 
+Linux – it’s free and easily configurable to be secure, especially at enterprise level. 
 
 I chose Kubuntu ( A flavour of Ubuntu ) because most support for Ubuntu applies which has a huge community – 
 this means most errors you could encounter have likely already been solved and documented online. 
