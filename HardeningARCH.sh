@@ -236,21 +236,23 @@ boot_parameter_hardening() {
 
     # Require kernel modules to be signed with a valid key.
     # This prevents out-of-tree modules from being loaded so it's separate from the bulk of the hardening parameters.
-    read -r -p "Require kernel modules to be signed with a valid key? (y/n) " require_signed_modules
-    if [ "${require_signed_modules}" = "y" ]; then
-      # GRUB-specific configuration.
-      if [ "${use_grub}" = "y" ]; then
+#    read -r -p "Require kernel modules to be signed with a valid key? (y/n) " require_signed_modules
+#    if [ "${require_signed_modules}" = "y" ]; then
+#      # GRUB-specific configuration.
+#      if [ "${use_grub}" = "y" ]; then
         # Add kernel hardening boot parameters.
         # shellcheck disable=SC2016
-        echo '''GRUB_CMDLINE_LINUX="$GRUB_CMDLINE_LINUX module.sig_enforce=1"''' > /etc/default/grub.d/40_require_signed_modules.cfg
-      elif [ "${use_syslinux}" = "y" ]; then
+#        echo '''GRUB_CMDLINE_LINUX="$GRUB_CMDLINE_LINUX module.sig_enforce=1"''' > /etc/default/grub.d/40_require_signed_modules.cfg
+#      elif [ "${use_syslinux}" = "y" ]; then
         # Append new boot parameters.
-        syslinux_append "module.sig_enforce=1"
-      fi
-    fi
+#        syslinux_append "module.sig_enforce=1"
+#      fi
+#    fi
+
+# PANZER: Requires secure boot, later revisions may want this but ported to other distros might lock system out depending on BIOS / OS
 
     # Disable IPv6.
-    read -r -p "Do you want to disable IPv6? (y/n) " disable_ipv6
+    read -r -p "Do you want to disable IPv6? (y/n) [ not recommended ] " disable_ipv6
     if [ "${disable_ipv6}" = "y" ]; then
       if [ "${use_grub}" = "y" ]; then
         # shellcheck disable=SC2016
@@ -267,28 +269,31 @@ boot_parameter_hardening() {
   fi
 }
 
-hidepid() {
+# hidepid() {
   ## Hidepid.
-  read -r -p "Use hidepid to hide other users' processes? (see: https://theprivacyguide1.github.io/linux_hardening_guide.html#hidepid) (y/n) " hidepid
-  if [ "${hidepid}" = "y" ]; then
+#  read -r -p "Use hidepid to hide other users' processes? (see: https://theprivacyguide1.github.io/linux_hardening_guide.html#hidepid) (y/n) " hidepid
+#  if [ "${hidepid}" = "y" ]; then
     # Enable hidepid.
-    echo "proc /proc proc nosuid,nodev,noexec,hidepid=2,gid=proc 0 0" >> /etc/fstab
+#    echo "proc /proc proc nosuid,nodev,noexec,hidepid=2,gid=proc 0 0" >> /etc/fstab
 
     # Create proc group if it doesn't exist already.
-    if ! grep "proc" /etc/group &>/dev/null; then
-      groupadd proc
-    fi
+#    if ! grep "proc" /etc/group &>/dev/null; then
+#      groupadd proc
+#    fi
 
     # Create drop-in directory for systemd-logind if it doesn't already exist.
-    if ! [ -d "/etc/systemd/system/systemd-logind.service.d/" ]; then
-      mkdir /etc/systemd/system/systemd-logind.service.d/
-    fi
+#    if ! [ -d "/etc/systemd/system/systemd-logind.service.d/" ]; then
+#      mkdir /etc/systemd/system/systemd-logind.service.d/
+#    fi
 
     # Create exception for systemd-logind so user sessions still work.
-    echo "[Service]
-SupplementaryGroups=proc" > /etc/systemd/system/systemd-logind.service.d/hidepid.conf
-  fi
-}
+#    echo "[Service]
+#SupplementaryGroups=proc" > /etc/systemd/system/systemd-logind.service.d/hidepid.conf
+#  fi
+
+# PANZER: not sure this is really needed / effective
+
+#}
 
 disable_nf_conntrack_helper() {
   ## Disable Netfilter connection tracking helper.
@@ -298,16 +303,18 @@ disable_nf_conntrack_helper() {
   fi
 }
 
-install_linux_hardened() {
+#install_linux_hardened() {
   ## Linux-Hardened
-  read -r -p "Install linux-hardened? (see: https://theprivacyguide1.github.io/linux_hardening_guide.html#linux-hardened) (y/n) " linux_hardened
-  if [ "${linux_hardened}" = "y" ]; then
+#  read -r -p "Install linux-hardened? (see: https://theprivacyguide1.github.io/linux_hardening_guide.html#linux-hardened) (y/n) " linux_hardened
+#  if [ "${linux_hardened}" = "y" ]; then
     # Install linux-hardened.
-    pacman -S --noconfirm -q linux-hardened linux-hardened-headers
+#    pacman -S --noconfirm -q linux-hardened linux-hardened-headers
 
     # Re-generate GRUB configuration.
-    grub-mkconfig -o /boot/grub/grub.cfg
-  fi
+#    grub-mkconfig -o /boot/grub/grub.cfg
+#  fi
+#
+# PANZER: I don't think this works with Manjaro and it 100% won't work on Debian based OS
 }
 
 apparmor() {
@@ -371,7 +378,7 @@ restrict_root() {
   # Checks if SSH is installed before asking.
   if [ -x "$(command -v ssh)" ]; then
     # Deny root login via SSH.
-    read -r -p "Deny root login via SSH? (see: https://theprivacyguide1.github.io/linux_hardening_guide.html#denying_root_login_ssh) (y/n) " deny_root_ssh
+    read -r -p "Deny root login via SSH? [recommended] (see: https://theprivacyguide1.github.io/linux_hardening_guide.html#denying_root_login_ssh) (y/n) " deny_root_ssh
     if [ "${deny_root_ssh}" = "y" ]; then
       echo 'PermitRootLogin no' >> /etc/ssh/sshd_config
     fi
@@ -775,9 +782,9 @@ fi
 script_checks
 sysctl_hardening
 boot_parameter_hardening
-hidepid
+#hidepid
 disable_nf_conntrack_helper
-install_linux_hardened
+#install_linux_hardened
 apparmor
 get_firejail
 restrict_root
