@@ -18,6 +18,20 @@
 
 # https://gitlab.com/madaidan/arch-hardening-script
 # dead on madaidan's page in Gitlab so brought it over for analysis, can be converted to Debian also.
+# BELOW is a backup of the mac spoofer script
+#        ##!/bin/bash
+#        
+#        # Get list of network interfaces. Excludes loopback and virtual machine interfaces.
+#        interfaces=$(ls /sys/class/net | grep -v 'lo' | grep -v 'tun0' | grep -v "virbr")
+#        
+#        # Spoof the MAC address of each.
+#        for i in ${interfaces}
+#        do
+#          macchanger -e $i >/dev/null # Hide the output so it can't be discovered with systemd logs.
+#        done
+
+# anyway back to the show
+
 
 while test $# -gt 0; do
         case "$1" in
