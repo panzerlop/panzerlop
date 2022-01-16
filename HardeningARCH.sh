@@ -30,6 +30,8 @@
 #          macchanger -e $i >/dev/null # Hide the output so it can't be discovered with systemd logs.
 #        done
 
+# is fail2ban in here? quick note 
+
 # anyway back to the show
 
 
