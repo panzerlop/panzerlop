@@ -246,7 +246,7 @@ firejail() {
 debsums() {
 
     # Installs debsums if it isn't already.
-  read -r -p "Install debsums? [ Sandboxing ] (y/n) " install_firejail
+  read -r -p "Install debsums? (y/n) " install_debsums
 	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
     apt-get install debsums
 	
@@ -254,12 +254,12 @@ debsums() {
   fi
 }
 
-debsecan() {
+debscan() {
 
-    # Installs debsecan if it isn't already.
-  read -r -p "Install debsecan? [ Sandboxing ] (y/n) " install_firejail
-	if [ "$(dpkg -l | awk '/debsecan/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get install debsecan
+    # Installs debscan if it isn't already.
+  read -r -p "Install debsecan? (y/n) " install_debscan
+	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
+    apt-get install debscan
 	
 
   fi
@@ -285,8 +285,12 @@ disable_nf_conntrack_helper() {
 #
 
 webcam_and_microphone() {
+
+sleep 3
+echo ""
+echo ""
 echo " - ! - ! - ! - ! - ! - HELLO THERE : "
-echo " !!! IF INPUT 'y' IT WILL BLACKLIST YOUR / THE CAMERA MODULE!!! (/etc/modprobe.d/blacklist-webcam.conf) "
+echo " !!! THIS WILL BLACKLIST YOUR CAMERA MODULE!!! "
 echo ""
 echo ""
   ## Block the webcam and microphone.
@@ -295,11 +299,15 @@ echo ""
     # Blacklist the webcam kernel module.
     echo "install uvcvideo /bin/true" > /etc/modprobe.d/blacklist-webcam.conf
   fi
-  
+echo ""
+echo ""
 echo " - ! - ! - ! - ! - ! - HELLO THERE : "
+echo ""
 echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR MICROPHONES AND SPEAKERS !!! "
 echo ""
 echo ""
+sleep 3
+
   read -r -p "Do you want to blacklist the microphone and speaker kernel module?  (y/n) " blacklist_mic
   if [ "${blacklist_mic}" = "y" ]; then
     # Blacklist the microphone and speaker kernel module.
