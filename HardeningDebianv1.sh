@@ -254,7 +254,7 @@ debscan() {
     # Installs debscan if it isn't already.
   read -r -p "Install debsecan? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install debscan 
+    apt-get -y install debscan -y
 	
 
   fi
@@ -265,7 +265,7 @@ listbugs () {
     # Installs listbugs if it isn't already.
   read -r -p "Install listbugs? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install listbugs 
+    apt-get -y install listbugs -y
 	
 
   fi
