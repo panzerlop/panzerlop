@@ -235,7 +235,7 @@ firejail() {
     # Installs Firejail if it isn't already.
   read -r -p "Install Firejail? [ Sandboxing ] (y/n) " install_firejail
 	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install firejail -y
+    apt-get -y install firejail 
 
   fi
 }
@@ -244,7 +244,7 @@ debsums() {
     # Installs debsums if it isn't already.
   read -r -p "Install debsums? (y/n) " install_debsums
 	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install debsums -y
+    apt-get -y install debsums 
 
   fi
 }
@@ -254,7 +254,7 @@ debscan() {
     # Installs debscan if it isn't already.
   read -r -p "Install debsecan? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install debscan -y
+    apt-get -y install debscan 
 	
 
   fi
