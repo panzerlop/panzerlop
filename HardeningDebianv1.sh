@@ -4,9 +4,9 @@
 #Also shoutout to the Whonix team
 
 #This version is changed to less interupt with daily computing and appropriate for Debian derivitives
-#The vast majority of the tweaks are from here
+#The vast majority of the tweaks are from here...
 #
-#You SHOULD read the information too.
+# ! You SHOULD read the information too;
 #
 #https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
