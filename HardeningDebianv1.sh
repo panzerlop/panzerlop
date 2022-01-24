@@ -263,6 +263,33 @@ configure_hostname() {
   fi
 }
 
+block_wireless_devices() {
+  ## Wireless devices
+  echo "" 
+  echo "WARNING: THIS WILL DISABLE YOUR WIRELESS DEVICES (rfkill unblock wifi to fix)"
+  echo "" 
+  read -r -p "Block all wireless devices with rfkill? (y/n) " block_wireless
+  if [ "${block_wireless}" = "y" ]; then
+    # Uses rfkill to block all wireless devices.
+    rfkill block all
+
+    # Unblock WiFi.
+    read -r -p "Unblock WiFi? (y/n) " unblock_wifi
+    if [ "${unblock_wifi}" = "y" ]; then
+      rfkill unblock wifi
+    fi
+  echo "" 
+  echo "WARNING: THIS WILL DISABLE BLUETOOTH in the /etc/modprobe.d/  folder"
+  echo "" 
+    # Blacklist bluetooth kernel module.
+    read -r -p "Blacklist the bluetooth kernel module? (y/n) " blacklist_bluetooth
+    if [ "${blacklist_bluetooth}" = "y" ]; then
+      echo "install btusb /bin/true
+install bluetooth /bin/true" > /etc/modprobe.d/blacklist-bluetooth.conf
+    fi
+  fi
+}
+
 ending() {
   ## Reboot
   echo ""
