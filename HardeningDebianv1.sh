@@ -242,7 +242,7 @@ debsums() {
     # Installs debsums if it isn't already.
   read -r -p "Install debsums? (y/n) " install_debsums
 	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install debsums 
+ 		sudo apt install debsums
 
   fi
 }
