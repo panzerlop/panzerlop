@@ -1,6 +1,8 @@
 #!/bin/bash -e
 
 # Sorry madaidan for butchering your script but I love the idea , just want to take out irrelivant parts and things that might mess with daily use for casual user
+# oh and the things I dion't  understand ;) big respect 
+
 
 #    Arch Hardening Script
 #    Copyright (C) 2019  madaidan
