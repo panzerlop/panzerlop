@@ -201,8 +201,9 @@ moreservices() {
   read -r -p "Remove more generally un-needed services? (xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server)  (y/n) " install_ufw
   if [ "${moreservices}" = "y" ]; then
     # remove  them 
-		apt-get --purge remove xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server
+		apt-get purge xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server
 
+  fi
   fi
 }
 
@@ -265,7 +266,7 @@ listbugs () {
     # Installs listbugs if it isn't already.
   read -r -p "Install listbugs? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install listbugs -y
+    apt-get -y install listbugs 
 	
 
   fi
