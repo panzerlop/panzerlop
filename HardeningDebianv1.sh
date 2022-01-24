@@ -219,6 +219,7 @@ firewall() {
 	echo It is a simple but effective firewall
 	else
     apt-get install UFW
+	apt install UFW
 	fi
 
     # Enable UFW.
@@ -237,7 +238,7 @@ firejail() {
     # Installs Firejail if it isn't already.
   read -r -p "Install Firejail? [ Sandboxing ] (y/n) " install_firejail
 	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get install firejail
+    sudo apt-get install  firejail -y
 	
 
   fi
@@ -248,7 +249,7 @@ debsums() {
     # Installs debsums if it isn't already.
   read -r -p "Install debsums? (y/n) " install_debsums
 	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get install debsums
+    sudo apt-get install debsums -y
 	
 
   fi
@@ -259,7 +260,7 @@ debscan() {
     # Installs debscan if it isn't already.
   read -r -p "Install debsecan? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get install debscan
+    sudo apt-get install debscan -y
 	
 
   fi
@@ -270,7 +271,7 @@ listbugs () {
     # Installs listbugs if it isn't already.
   read -r -p "Install listbugs? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get install listbugs 
+    sudo apt-get install listbugs -y
 	
 
   fi
