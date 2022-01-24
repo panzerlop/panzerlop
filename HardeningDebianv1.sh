@@ -147,7 +147,7 @@ vm.mmap_rnd_compat_bits=16" > /etc/sysctl.d/mmap_aslr.conf
 }
 
 disable_nf_conntrack_helper() {
- echo ""
+
   ## Disable Netfilter connection tracking helper.
   read -r -p "Disable the Netfilter automatic conntrack helper assignment? (y/n) " disable_conntrack_helper
   if [ "${disable_conntrack_helper}" = "y" ]; then
@@ -156,6 +156,7 @@ disable_nf_conntrack_helper() {
 }
 
 restrict_root() {
+
   ## Restricting root
   # Clear /etc/securetty
  echo ""
@@ -189,6 +190,7 @@ restrict_root() {
 }
 
 moreservices() {
+
   ## Just incase
   read -r -p "Remove more generally un-needed services? (xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server)  (y/n) " install_ufw
   if [ "${moreservices}" = "y" ]; then
@@ -199,6 +201,7 @@ moreservices() {
 }
 
 firewall() {
+
   ## Firewall
   read -r -p "Install UFW Firewall (y/n) " install_ufw
   if [ "${install_ufw}" = "y" ]; then
@@ -224,6 +227,7 @@ firewall() {
 }
 
 firejail() {
+
     # Installs Firejail if it isn't already.
   read -r -p "Install Firejail? [ Sandboxing ] (y/n) " install_firejail
 	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
@@ -235,6 +239,7 @@ firejail() {
 
 
 webcam_and_microphone() {
+
   ## Block the webcam and microphone.
   read -r -p "Do you want to blacklist the webcam kernel module? (y/n) " blacklist_webcam
   if [ "${blacklist_webcam}" = "y" ]; then
@@ -256,38 +261,12 @@ webcam_and_microphone() {
 }
 
 configure_hostname() {
+ echo ""
   ## Change hostname to a generic one.
   read -r -p "Change hostname to 'host'?  (y/n) " hostname
   if [ "${hostname}" = "y" ]; then
     hostnamectl set-hostname host
-  fi
-}
-
-block_wireless_devices() {
-  ## Wireless devices
-  echo "" 
-  echo "WARNING: THIS WILL DISABLE YOUR WIRELESS DEVICES (rfkill unblock wifi to fix)"
-  echo "" 
-  read -r -p "Block all wireless devices with rfkill? (y/n) " block_wireless
-  if [ "${block_wireless}" = "y" ]; then
-    # Uses rfkill to block all wireless devices.
-    rfkill block all
-
-    # Unblock WiFi.
-    read -r -p "Unblock WiFi? (y/n) " unblock_wifi
-    if [ "${unblock_wifi}" = "y" ]; then
-      rfkill unblock wifi
-    fi
-  echo "" 
-  echo "WARNING: THIS WILL DISABLE BLUETOOTH in the /etc/modprobe.d/  folder"
-  echo "" 
-    # Blacklist bluetooth kernel module.
-    read -r -p "Blacklist the bluetooth kernel module? (y/n) " blacklist_bluetooth
-    if [ "${blacklist_bluetooth}" = "y" ]; then
-      echo "install btusb /bin/true
-install bluetooth /bin/true" > /etc/modprobe.d/blacklist-bluetooth.conf
-    fi
-  fi
+  fi 
 }
 
 ending() {
@@ -304,10 +283,28 @@ echo "Security Hardening Script for Debian & derivitives such as Linux Mint"
 echo "https://theprivacyguide1.github.io/linux_hardening_guide.html"
 echo ""
 echo "The vast majority or this script is owed to the information here."
-echo "And the bunch of people who've helped with everything."
+echo "And the various generosity of some security forums online."
+echo ""
+cat << "EOF"
+               .-.
+         .-'``(|||)
+      ,`\ \    `-`.
+     /   \ '``-.   `
+   .-.  ,       `___:
+  (:::) :        ___
+   `-`  `       ,   :
+     \   / ,..-`   ,
+      `./ /    .-.`
+         `-..-(   ) 
+               `-`
+EOF
+
 echo ""
 echo ""
-read -r -p "Start The Security Hardening Script (y/n) " start
+echo "Also, anything you do that breaks your own PC is nothing to do with me"
+echo "So if you also agree with that you may..."
+echo ""
+read -r -p "...start The Security Hardening Script? (y/n) " start
 if [ "${start}" = "n" ]; then
 
 echo ""
