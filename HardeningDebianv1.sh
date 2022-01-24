@@ -20,6 +20,8 @@ fi
 
 
 script_checks() {
+ sudo apt-get update
+ 
  echo ""
       if ! ps -p 1 | grep systemd &>/dev/null; then
       echo "This script can only be used with systemd."
@@ -238,7 +240,7 @@ firejail() {
     # Installs Firejail if it isn't already.
   read -r -p "Install Firejail? [ Sandboxing ] (y/n) " install_firejail
 	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
-    sudo apt-get install  firejail -y
+    sudo apt install  firejail -y
 	
 
   fi
@@ -249,7 +251,7 @@ debsums() {
     # Installs debsums if it isn't already.
   read -r -p "Install debsums? (y/n) " install_debsums
 	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
-    sudo apt-get install debsums -y
+    sudo apt install debsums -y
 	
 
   fi
@@ -260,7 +262,7 @@ debscan() {
     # Installs debscan if it isn't already.
   read -r -p "Install debsecan? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
-    sudo apt-get install debscan -y
+    sudo apt install debscan -y
 	
 
   fi
@@ -271,7 +273,7 @@ listbugs () {
     # Installs listbugs if it isn't already.
   read -r -p "Install listbugs? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
-    sudo apt-get install listbugs -y
+    sudo apt install listbugs -y
 	
 
   fi
@@ -401,6 +403,6 @@ disable_nf_conntrack_helper
 debsums
 debscan
 firejail
-webcam_and_microphone
 listbugs
+webcam_and_microphone
 ending
