@@ -253,7 +253,7 @@ disable_nf_conntrack_helper() {
 
 #
 #
-# MAC Randomiser in script soulution would be nice without using curl from 2019 source
+# MAC Randomiser needed. Unsure the old one still effetive. See Source at top or in REPO.
 #
 #
 
