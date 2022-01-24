@@ -15,7 +15,7 @@
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
 else
-  sudo apt-get nano
+   sudo apt-get nano
 fi
 
 
