@@ -1,4 +1,7 @@
 #!/bin/bash -e
+
+#converting and updating from https://github.com/panzerlop/panzerlop/blob/main/HardeningARCH.sh
+
 #2009 script Copyright (C) 2019  madaidan under GPL
 #2022 script Copyright (C) 2022  panzerlop under GPL
 #Also shoutout to the Whonix team
