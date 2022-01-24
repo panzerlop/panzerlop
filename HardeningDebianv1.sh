@@ -8,7 +8,7 @@
 #
 #You SHOULD read the information too.
 #
-#https://theprivacyguide1.github.io/linux_hardening_guide.html 
+# >  https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
 # INSTALLERS SEEMS BROKEN ( see debsums etc lower down )
 
