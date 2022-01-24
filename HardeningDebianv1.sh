@@ -243,6 +243,33 @@ firejail() {
   fi
 }
 
+debsums() {
+
+    # Installs debsums if it isn't already.
+  read -r -p "Install debsums? [ Sandboxing ] (y/n) " install_firejail
+	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
+    apt-get install debsums
+	
+
+  fi
+}
+
+debsecan() {
+
+    # Installs debsecan if it isn't already.
+  read -r -p "Install debsecan? [ Sandboxing ] (y/n) " install_firejail
+	if [ "$(dpkg -l | awk '/debsecan/ {print }'|wc -l)" -ge 1 ]; then
+    apt-get install debsecan
+	
+
+  fi
+}
+
+#    - apt-listbugs                                            [ Not Installed ]
+#    - apt-listchanges                                         [ Not Installed ]
+#    - checkrestart                                            [ Not Installed ]
+#    - needrestart                                             [ Not Installed ]
+
 disable_nf_conntrack_helper() {
   ## Disable Netfilter connection tracking helper.
   read -r -p "Disable the Netfilter automatic conntrack helper assignment? "
@@ -258,8 +285,8 @@ disable_nf_conntrack_helper() {
 #
 
 webcam_and_microphone() {
-echo " ---------------------------------------------------------------------------------------------------- "
-echo " !!! IF SAY 'y' IT WILL BLACKLIST YOUR / THE CAMERA MODULE!!! (/etc/modprobe.d/blacklist-webcam.conf) "
+echo " - ! - ! - ! - ! - ! - HELLO THERE : "
+echo " !!! IF INPUT 'y' IT WILL BLACKLIST YOUR / THE CAMERA MODULE!!! (/etc/modprobe.d/blacklist-webcam.conf) "
 echo ""
 echo ""
   ## Block the webcam and microphone.
@@ -269,7 +296,7 @@ echo ""
     echo "install uvcvideo /bin/true" > /etc/modprobe.d/blacklist-webcam.conf
   fi
   
-echo " ---------------------------------------------------------------------------------------------------- "
+echo " - ! - ! - ! - ! - ! - HELLO THERE : "
 echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR MICROPHONES AND SPEAKERS !!! "
 echo ""
 echo ""
@@ -351,6 +378,8 @@ restrict_root
 moreservices
 configure_hostname
 disable_nf_conntrack_helper
+debsums
+debscan
 firejail
 webcam_and_microphone
 ending
