@@ -1,6 +1,7 @@
 #!/bin/bash -e
-#2009 script Copyright (C) 2019  madaidan under GPL
-#2022 script Copyright (C) 2022  panzerlop under GPLv3 and any previous
+#2019 script Copyright (C) 2019  madaidan under GPL
+#2022 script Copyright (C) 2022  panzerlop under GPL
+#
 #Also shoutout to the Whonix team
 
 #This version is changed to less interupt with daily computing and appropriate for Debian derivitives
@@ -8,14 +9,14 @@
 #
 #You SHOULD read the information too.
 #
-# >  https://theprivacyguide1.github.io/linux_hardening_guide.html 
+#https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
-# INSTALLERS SEEM BROKEN ( see debsums etc lower down )
+#
 
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
 else
-  sudo apt-get nano
+ apt-get -y install
 fi
 
 script_checks() {
@@ -211,14 +212,14 @@ firewall() {
   read -r -p "Install UFW Firewall (y/n) " install_ufw
   if [ "${install_ufw}" = "y" ]; then
     # Installs ufw if it isn't already.
-  read -r -p "Install ufw? [ Firewall ] (y/n) " install_ufw
+  read -r -p "Install ufw? A Firewall. (y/n) " install_ufw
 	if [ "$(dpkg -l | awk '/ufw/ {print }'|wc -l)" -ge 1 ]; then
 	echo You need UFW installed for the next part, it should be anyway
 	echo ""
 	echo It is a simple but effective firewall
 	else
     apt-get install UFW
-	apt install UFW
+	apt-get -y install UFW
 	fi
 
     # Enable UFW.
@@ -234,7 +235,7 @@ firejail() {
     # Installs Firejail if it isn't already.
   read -r -p "Install Firejail? [ Sandboxing ] (y/n) " install_firejail
 	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
-    sudo apt install  firejail -y
+    apt-get -y install firejail -y
 
   fi
 }
@@ -243,7 +244,7 @@ debsums() {
     # Installs debsums if it isn't already.
   read -r -p "Install debsums? (y/n) " install_debsums
 	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
-    sudo apt install debsums -y
+    apt-get -y install debsums -y
 
   fi
 }
@@ -253,7 +254,7 @@ debscan() {
     # Installs debscan if it isn't already.
   read -r -p "Install debsecan? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
-    sudo apt install debscan -y
+    apt-get -y install debscan 
 	
 
   fi
@@ -262,9 +263,9 @@ debscan() {
 listbugs () {
 
     # Installs listbugs if it isn't already.
-  read -r -p "Install listbugs? (y/n) " install_listbugs
+  read -r -p "Install listbugs? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
-    sudo apt install listbugs -y
+    apt-get -y install listbugs 
 	
 
   fi
