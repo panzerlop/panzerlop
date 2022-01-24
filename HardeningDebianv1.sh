@@ -338,7 +338,7 @@ elif ! [ "${start}" = "y" ]; then
   echo ""
   echo "You did not enter a correct character."
    echo ""
-     echo "Please pay attention to the screen during this install for your own good!"
+     echo "Be careful, especially if you want microphone and audio access"
   exit 1
 fi
 
