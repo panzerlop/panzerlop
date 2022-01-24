@@ -14,6 +14,10 @@
 
 # using apt isn't working to install stuff like debsums ( near bottom )
 
+# Audit from Lynis on default MINT 20.10 is 64 after script, would b e higher did the extra software install
+
+# anyways....
+
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
 else
