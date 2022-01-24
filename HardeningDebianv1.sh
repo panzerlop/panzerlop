@@ -9,7 +9,8 @@
 #You SHOULD read the information too.
 #
 #https://theprivacyguide1.github.io/linux_hardening_guide.html 
-
+#
+#
 
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo You need nano installed for this script
@@ -198,7 +199,7 @@ firewall() {
 	echo ""
 	echo It is a simple but effective firewall
 	else
-    apt-get install firejail
+    apt-get install UFW
 	fi
 
     # Enable UFW.
