@@ -13,7 +13,7 @@
 #
 
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
-  echo You need nano installed for this script
+  echo "You need nano installed for this script"
 else
   sudo apt-get nano
 fi
@@ -278,6 +278,7 @@ ending() {
   fi
 }
 
+echo ""
 echo ""
 echo "Security Hardening Script for Debian & derivitives such as Linux Mint"
 echo "https://theprivacyguide1.github.io/linux_hardening_guide.html"
