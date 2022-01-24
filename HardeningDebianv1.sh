@@ -253,12 +253,13 @@ disable_nf_conntrack_helper() {
 
 #
 #
-# MAC Randomiser needed. Unsure the old one still effetive. See Source at top or in REPO.
+# MAC Randomiser in script soulution would be nice without using curl from 2019 source
 #
 #
 
 webcam_and_microphone() {
-echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR CAMERA !!! (/etc/modprobe.d/blacklist-webcam.conf) "
+echo ""
+echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR / THE CAMERA MODULE!!! (/etc/modprobe.d/blacklist-webcam.conf) "
 echo ""
   ## Block the webcam and microphone.
   read -r -p "Do you want to blacklist the webcam kernel module? (y/n) " blacklist_webcam
@@ -267,6 +268,7 @@ echo ""
     echo "install uvcvideo /bin/true" > /etc/modprobe.d/blacklist-webcam.conf
   fi
   
+echo ""
 echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR MICROPHONES AND SPEAKERS !!! "
 echo ""
   read -r -p "Do you want to blacklist the microphone and speaker kernel module?  (y/n) " blacklist_mic
@@ -344,6 +346,7 @@ sysctl_hardening
 firewall
 restrict_root
 moreservices
+configure_hostname
 disable_nf_conntrack_helper
 firejail
 webcam_and_microphone
