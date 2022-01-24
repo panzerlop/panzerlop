@@ -265,10 +265,21 @@ debscan() {
   fi
 }
 
+listbugs () {
+
+    # Installs listbugs if it isn't already.
+  read -r -p "Install listbugs? (y/n) " install_debscan
+	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
+    apt-get install listbugs 
+	
+
+  fi
+}
+
 #    - apt-listbugs                                            [ Not Installed ]
 #    - apt-listchanges                                         [ Not Installed ]
-#    - checkrestart                                            [ Not Installed ]
-#    - needrestart                                             [ Not Installed ]
+#    - checkrestart                                           [[[ outdated or not needed?]]]]
+#    - needrestart                                             [ "" ]
 
 disable_nf_conntrack_helper() {
   ## Disable Netfilter connection tracking helper.
@@ -390,4 +401,5 @@ debsums
 debscan
 firejail
 webcam_and_microphone
+listbugs
 ending
