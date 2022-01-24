@@ -10,7 +10,7 @@
 #
 #https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
-#
+# INSTALLERS SEEMS BROKEN ( see debsums etc lower down )
 
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
