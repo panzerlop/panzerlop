@@ -12,18 +12,11 @@
 #
 #
 
-# using apt isn't working to install stuff like debsums ( near bottom )
-
-# Audit from Lynis on default MINT 20.10 is 64 after script, would b e higher did the extra software install
-
-# anyways....
-
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
 else
   sudo apt-get nano
 fi
-
 
 script_checks() {
  sudo apt-get update
@@ -39,8 +32,6 @@ echo ""
       exit 1
     fi
 }
-
-
 
 # It gets a bit heavier now
 
@@ -236,29 +227,23 @@ firewall() {
 
     # Deny all incoming traffic.
     ufw default deny incoming # Also disables ICMP timestamps
-	
-	
   fi
 }
 
 firejail() {
-
     # Installs Firejail if it isn't already.
   read -r -p "Install Firejail? [ Sandboxing ] (y/n) " install_firejail
 	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
     sudo apt install  firejail -y
-	
 
   fi
 }
 
 debsums() {
-
     # Installs debsums if it isn't already.
   read -r -p "Install debsums? (y/n) " install_debsums
 	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
     sudo apt install debsums -y
-	
 
   fi
 }
@@ -412,5 +397,3 @@ firejail
 listbugs
 webcam_and_microphone
 ending
-
-
