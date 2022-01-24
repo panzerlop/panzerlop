@@ -12,6 +12,8 @@
 #
 #
 
+# using apt isn't working to install stuff like debsums ( near bottom )
+
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
 else
@@ -406,3 +408,5 @@ firejail
 listbugs
 webcam_and_microphone
 ending
+
+
