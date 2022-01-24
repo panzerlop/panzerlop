@@ -188,6 +188,16 @@ restrict_root() {
   fi
 }
 
+moreservices() {
+  ## Just incase
+  read -r -p "Remove more generally un-needed services? (xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server)  (y/n) " install_ufw
+  if [ "${moreservices}" = "y" ]; then
+    # remove  them 
+		apt-get --purge remove xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server
+
+  fi
+}
+
 firewall() {
   ## Firewall
   read -r -p "Install UFW Firewall (y/n) " install_ufw
@@ -208,18 +218,17 @@ firewall() {
 
     # Deny all incoming traffic.
     ufw default deny incoming # Also disables ICMP timestamps
+	
+	
   fi
 }
 
 firejail() {
-  ## Firewall
-  read -r -p "Install Firejail (y/n) " install_firejail
-  if [ "${install_firejail}" = "y" ]; then
-    # Installs FJ if it isn't already.
+    # Installs Firejail if it isn't already.
   read -r -p "Install Firejail? [ Sandboxing ] (y/n) " install_firejail
 	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
     apt-get install firejail
-	fi
+	
 
   fi
 }
@@ -287,6 +296,7 @@ fi
 script_checks
 sysctl_hardening
 firewall
+moreservices
 disable_nf_conntrack_helper
 restrict_root
 firejail
