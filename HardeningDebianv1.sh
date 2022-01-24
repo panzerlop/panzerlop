@@ -258,8 +258,9 @@ disable_nf_conntrack_helper() {
 #
 
 webcam_and_microphone() {
+echo " ---------------------------------------------------------------------------------------------------- "
+echo " !!! IF SAY 'y' IT WILL BLACKLIST YOUR / THE CAMERA MODULE!!! (/etc/modprobe.d/blacklist-webcam.conf) "
 echo ""
-echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR / THE CAMERA MODULE!!! (/etc/modprobe.d/blacklist-webcam.conf) "
 echo ""
   ## Block the webcam and microphone.
   read -r -p "Do you want to blacklist the webcam kernel module? (y/n) " blacklist_webcam
@@ -268,8 +269,9 @@ echo ""
     echo "install uvcvideo /bin/true" > /etc/modprobe.d/blacklist-webcam.conf
   fi
   
-echo ""
+echo " ---------------------------------------------------------------------------------------------------- "
 echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR MICROPHONES AND SPEAKERS !!! "
+echo ""
 echo ""
   read -r -p "Do you want to blacklist the microphone and speaker kernel module?  (y/n) " blacklist_mic
   if [ "${blacklist_mic}" = "y" ]; then
