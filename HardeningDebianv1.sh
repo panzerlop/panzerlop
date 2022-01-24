@@ -247,16 +247,19 @@ debsums() {
   fi
 }
 
-debscan() {
+#debscan() {
+#
+#    # Installs debscan if it isn't already.
+#  read -r -p "Install debsecan? (y/n) " install_debscan
+#	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
+#    apt-get -y install debscan 
+#	
 
-    # Installs debscan if it isn't already.
-  read -r -p "Install debsecan? (y/n) " install_debscan
-	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install debscan 
-	
 
-  fi
-}
+#fuck you ARCH, badrepos and AURs
+
+#  fi
+#}
 
 listbugs () {
 
@@ -391,7 +394,7 @@ moreservices
 configure_hostname
 disable_nf_conntrack_helper
 debsums
-debscan
+#debscan
 firejail
 listbugs
 webcam_and_microphone
