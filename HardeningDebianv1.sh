@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #2009 script Copyright (C) 2019  madaidan under GPL
-#2022 script Copyright (C) 2022  panzerlop under GPL
+#2022 script Copyright (C) 2022  panzerlop under GPLv3 and under any previous
 #Also shoutout to the Whonix team
 
 #This version is changed to less interupt with daily computing and appropriate for Debian derivitives
