@@ -200,10 +200,7 @@ moreservices() {
   ## Just incase
   read -r -p "Remove more generally un-needed services? (xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server)  (y/n) " install_ufw
   if [ "${moreservices}" = "y" ]; then
-    # remove  them 
 		apt-get purge xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server
-
-  fi
   fi
 }
 
@@ -234,7 +231,7 @@ firewall() {
 
 firejail() {
     # Installs Firejail if it isn't already.
-  read -r -p "Install Firejail? [ Sandboxing ] (y/n) " install_firejail
+  read -r -p "Install Firejail? (y/n) " install_firejail
 	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
     apt-get -y install firejail 
 
