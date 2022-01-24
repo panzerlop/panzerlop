@@ -1,7 +1,4 @@
 #!/bin/bash -e
-
-#converting and updating from https://github.com/panzerlop/panzerlop/blob/main/HardeningARCH.sh
-
 #2009 script Copyright (C) 2019  madaidan under GPL
 #2022 script Copyright (C) 2022  panzerlop under GPL
 #Also shoutout to the Whonix team
@@ -201,7 +198,7 @@ firewall() {
 	echo ""
 	echo It is a simple but effective firewall
 	else
-    apt-get firejail
+    apt-get install firejail
 	fi
 
     # Enable UFW.
@@ -216,12 +213,11 @@ firewall() {
 firejail() {
   ## Firewall
   read -r -p "Install Firejail (y/n) " install_firejail
-  if [ "${install_ufw}" = "y" ]; then
+  if [ "${install_firejail}" = "y" ]; then
     # Installs FJ if it isn't already.
   read -r -p "Install Firejail? [ Sandboxing ] (y/n) " install_firejail
-	if [ "$(dpkg -l | awk '/ufw/ {print }'|wc -l)" -ge 1 ]; then
-	else
-    apt-get firejail
+	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
+    apt-get install firejail
 	fi
 
   fi
@@ -292,6 +288,6 @@ sysctl_hardening
 firewall
 disable_nf_conntrack_helper
 restrict_root
-get_firejail
+firejail
 webcam_and_microphone
 ending
