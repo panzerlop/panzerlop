@@ -4,9 +4,9 @@
 #Also shoutout to the Whonix team
 
 #This version is changed to less interupt with daily computing and appropriate for Debian derivitives
-#The vast majority of the tweaks are from here...
+#The vast majority of the tweaks are from here
 #
-# ! You SHOULD read the information too;
+#You SHOULD read the information too.
 #
 #https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
@@ -15,18 +15,24 @@
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
 else
-   sudo apt-get nano
+  sudo apt-get nano
 fi
 
 
 script_checks() {
  echo ""
-  
+      if ! ps -p 1 | grep systemd &>/dev/null; then
+      echo "This script can only be used with systemd."
+      exit 1
+    fi
+echo ""
     if [[ "$(id -u)" -ne 0 ]]; then
       echo "This script needs to be run as root."
       exit 1
     fi
 }
+
+
 
 # It gets a bit heavier now
 
@@ -237,16 +243,32 @@ firejail() {
   fi
 }
 
+disable_nf_conntrack_helper() {
+  ## Disable Netfilter connection tracking helper.
+  read -r -p "Disable the Netfilter automatic conntrack helper assignment? "
+  if [ "${disable_conntrack_helper}" = "y" ]; then
+    echo "options nf_conntrack nf_conntrack_helper=0" > /etc/modprobe.d/no-conntrack-helper.conf
+  fi
+}
+
+#
+#
+# MAC Randomiser in script soulution would be nice without using curl from 2019 source
+#
+#
 
 webcam_and_microphone() {
-
+echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR CAMERA !!! (/etc/modprobe.d/blacklist-webcam.conf) "
+echo ""
   ## Block the webcam and microphone.
   read -r -p "Do you want to blacklist the webcam kernel module? (y/n) " blacklist_webcam
   if [ "${blacklist_webcam}" = "y" ]; then
     # Blacklist the webcam kernel module.
     echo "install uvcvideo /bin/true" > /etc/modprobe.d/blacklist-webcam.conf
   fi
-
+  
+echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR MICROPHONES AND SPEAKERS !!! "
+echo ""
   read -r -p "Do you want to blacklist the microphone and speaker kernel module?  (y/n) " blacklist_mic
   if [ "${blacklist_mic}" = "y" ]; then
     # Blacklist the microphone and speaker kernel module.
@@ -278,7 +300,6 @@ ending() {
   fi
 }
 
-echo ""
 echo ""
 echo "Security Hardening Script for Debian & derivitives such as Linux Mint"
 echo "https://theprivacyguide1.github.io/linux_hardening_guide.html"
@@ -321,9 +342,9 @@ fi
 script_checks
 sysctl_hardening
 firewall
+restrict_root
 moreservices
 disable_nf_conntrack_helper
-restrict_root
 firejail
 webcam_and_microphone
 ending
