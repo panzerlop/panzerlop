@@ -1,7 +1,6 @@
 #!/bin/bash -e
 #2019 script Copyright (C) 2019  madaidan under GPL
 #2022 script Copyright (C) 2022  panzerlop under GPL
-#
 #Also shoutout to the Whonix team
 
 #This version is changed to less interupt with daily computing and appropriate for Debian derivitives
@@ -266,8 +265,7 @@ listbugs () {
     # Installs listbugs if it isn't already.
   read -r -p "Install listbugs? (y/n) " install_debscan
 	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install listbugs 
-	
+    apt-get -y install listbugs 	
 
   fi
 }
@@ -275,7 +273,8 @@ listbugs () {
 #    - apt-listbugs                                            [ Not Installed ]
 #    - apt-listchanges                                         [ Not Installed ]
 #    - checkrestart                                           [[[ outdated or not needed?]]]]
-#    - needrestart                                             [ "" ]
+#    - think may need to make these aliases another way?
+#
 
 disable_nf_conntrack_helper() {
   ## Disable Netfilter connection tracking helper.
