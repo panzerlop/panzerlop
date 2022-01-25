@@ -12,6 +12,8 @@
 #
 #
 
+set -eu -o pipefail # fail on error and report it, debug all lines
+
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
 else
