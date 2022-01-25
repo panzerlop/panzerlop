@@ -263,10 +263,11 @@ debsums() {
 listbugs () {
 
     # Installs listbugs if it isn't already.
-  read -r -p "Install listbugs? (y/n) " install_debscan
+  read -r -p "Install listbugs? (y/n) " install_listbugs
 	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
-    apt-get -y install listbugs 	
-
+#    apt-get -y install listbugs 	
+#try this
+	aptitude update && aptitude install -y listbugs
   fi
 }
 
