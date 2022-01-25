@@ -339,6 +339,11 @@ configure_hostname() {
 ending() {
   ## Reboot
   echo ""
+   echo "https://github.com/panzerlop/panzerlop"
+   echo "Hope thi helped"
+   echo "Maybe come improve it?"
+    echo ""
+       echo ""
   read -r -p "Reboot to apply all the changes? (y/n) " reboot
   if [ "${reboot}" = "y" ]; then
     reboot
