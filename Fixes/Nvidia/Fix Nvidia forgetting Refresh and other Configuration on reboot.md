@@ -12,5 +12,4 @@ Type your password and hit enter.
 
 Make sure after this, you also go into your Desktop Environment's Display Settings and set the same options for resolution and refresh rate.
 
-# regression in removing alternative way?
-#
+
