@@ -10,7 +10,11 @@
 #
 #https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
+# line 205: purge_services: command not found
 #
+# Rest seems to work - downloading programs is the issue. UFW steps proceed fine beacuse its included on MINT
+#
+
 
 set -eu -o pipefail # fail on error and report it, debug all lines
 
