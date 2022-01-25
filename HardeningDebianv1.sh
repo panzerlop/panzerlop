@@ -273,7 +273,7 @@ listbugs () {
 #    - apt-listbugs                                            [ Not Installed ]
 #    - apt-listchanges                                         [ Not Installed ]
 #    - checkrestart                                           [[[ outdated or not needed?]]]]
-#    - think may need to make these aliases another way?
+#    - not consistant amongst Debian Distros
 #
 
 disable_nf_conntrack_helper() {
