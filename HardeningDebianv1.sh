@@ -10,13 +10,14 @@
 #
 #https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
-# line 205: purge_services: command not found
+# The last few programs won't install - no errors thrown debsums,debscan,firejail,listbugs
 #
-# Rest seems to work - downloading programs is the issue. UFW steps proceed fine beacuse its included on MINT
+# Rest seems to function perfectly
 #
-
 
 set -eu -o pipefail # fail on error and report it, debug all lines
+
+
 
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
@@ -203,8 +204,8 @@ restrict_root() {
 moreservices() {
 
   ## Just incase
-  read -r -p "Remove more generally un-needed services? (xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server)  (y/n) " install_ufw
-  if [ "${moreservices}" = "y" ]; then
+  read -r -p "Remove more generally un-needed services? (xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server)  (y/n) " purge_services
+  if [ "${purge_services}" = "y" ]; then
 		apt-get purge xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server
   fi
 }
@@ -212,18 +213,14 @@ moreservices() {
 firewall() {
 
   ## Firewall
-  read -r -p "Install UFW Firewall (y/n) " install_ufw
-  if [ "${install_ufw}" = "y" ]; then
-    # Installs ufw if it isn't already.
+
   read -r -p "Install ufw? A Firewall. (y/n) " install_ufw
 	if [ "$(dpkg -l | awk '/ufw/ {print }'|wc -l)" -ge 1 ]; then
 	echo You need UFW installed for the next part, it should be anyway
 	echo ""
 	echo It is a simple but effective firewall
 	else
-    apt-get install UFW
 	apt-get -y install UFW
-	fi
 
     # Enable UFW.
     ufw enable
@@ -247,33 +244,27 @@ debsums() {
     # Installs debsums if it isn't already.
   read -r -p "Install debsums? (y/n) " install_debsums
 	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
- 		sudo apt install debsums
+ 		apt-get -y install debsums
 
   fi
 }
 
-#debscan() {
-#
-#    # Installs debscan if it isn't already.
-#  read -r -p "Install debsecan? (y/n) " install_debscan
-#	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
-#    apt-get -y install debscan 
-#	
+debscan() {
 
-
-#fuck you ARCH, badrepos and AURs
-
-#  fi
-#}
+    # Installs debscan if it isn't already.
+  read -r -p "Install debsecan? (y/n) " install_debscan
+	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
+    apt-get -y install debscan 
+	
+  fi
+}
 
 listbugs () {
 
     # Installs listbugs if it isn't already.
   read -r -p "Install listbugs? (y/n) " install_listbugs
 	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
-#    apt-get -y install listbugs 	
-#try this
-	aptitude update && aptitude install -y listbugs
+	sudo aptitude update && aptitude install -y listbugs
   fi
 }
 
@@ -285,7 +276,7 @@ listbugs () {
 
 disable_nf_conntrack_helper() {
   ## Disable Netfilter connection tracking helper.
-  read -r -p "Disable the Netfilter automatic conntrack helper assignment? "
+  read -r -p "Disable the Netfilter automatic conntrack helper assignment? " disable_conntrack_helper
   if [ "${disable_conntrack_helper}" = "y" ]; then
     echo "options nf_conntrack nf_conntrack_helper=0" > /etc/modprobe.d/no-conntrack-helper.conf
   fi
@@ -346,8 +337,9 @@ configure_hostname() {
 ending() {
   ## Reboot
   echo ""
-   echo "https://github.com/panzerlop/panzerlop"
-   echo "Hope thi helped"
+   echo " https://github.com/panzerlop/panzerlop "
+   echo ""
+   echo "Hope this helped"
    echo "Maybe come improve it?"
     echo ""
        echo ""
@@ -405,7 +397,7 @@ moreservices
 configure_hostname
 disable_nf_conntrack_helper
 debsums
-#debscan
+debscan
 firejail
 listbugs
 webcam_and_microphone
