@@ -3,7 +3,7 @@
 #2022 script Copyright (C) 2022  panzerlop under GPLv3
 #Also shoutout to the Whonix team
 
-#This version is changed to less interupt with daily computing and appropriate for Debian derivitives
+#This version is changed to less interupt with daily computing and (mostly) appropriate for Debian derivitives
 #The vast majority of the tweaks are from here
 #
 #You SHOULD read the information too.
