@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #2019 script Copyright (C) 2019  madaidan under GPL
-#2022 script Copyright (C) 2022  panzerlop under GPL
+#2022 script Copyright (C) 2022  panzerlop under GPLv3
 #Also shoutout to the Whonix team
 
 #This version is changed to less interupt with daily computing and appropriate for Debian derivitives
@@ -22,10 +22,14 @@ set -eu -o pipefail # fail on error and report it, debug all lines
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
 else
- apt-get -y install
+ apt-get -y install nano 
 fi
 
 script_checks() {
+
+# !!!!!!!
+# not sure about forcing software updates here without a user prompt, could be bad under some scenarios 
+
  sudo apt-get update
  
  echo ""
@@ -232,6 +236,10 @@ firewall() {
 }
 
 firejail() {
+
+# !!!!!!!!!!!!!!!!!!
+# for some reason this doesn't actually install listbugs same with debscan above, at least on Linux Mint 21.10, no idea why, will try on Kubuntu VM
+
     # Installs Firejail if it isn't already.
   read -r -p "Install Firejail? (y/n) " install_firejail
 	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
@@ -260,6 +268,7 @@ debscan() {
 }
 
 listbugs () {
+
 
     # Installs listbugs if it isn't already.
   read -r -p "Install listbugs? (y/n) " install_listbugs
@@ -384,8 +393,8 @@ echo ""
 elif ! [ "${start}" = "y" ]; then
   echo ""
   echo "You did not enter a correct character."
-   echo ""
-     echo "Be careful, especially if you want microphone and audio access"
+  echo ""
+  echo "Be careful, especially if you want microphone and audio access"
   exit 1
 fi
 
