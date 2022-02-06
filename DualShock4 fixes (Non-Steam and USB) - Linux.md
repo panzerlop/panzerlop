@@ -8,7 +8,7 @@ sudo pip install ds4drv
 sudo ds4drv
 ```
 
-## Ensure Bluetooh is off on your device:
+## Ensure Bluetooth is off on your device:
 
 
 Now hold ps button and share button on the controller until it flashes and connected the USB;
