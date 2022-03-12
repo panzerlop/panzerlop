@@ -382,7 +382,7 @@ EOF
 
 echo ""
 echo ""
-echo "Also, anything you do that breaks your own PC is nothing to do with me"
+echo "By using this script you accept any break in system function/ damage / blabla is your own fault..."
 echo "So if you also agree with that you may..."
 echo ""
 read -r -p "...start The Security Hardening Script? (y/n) " start
