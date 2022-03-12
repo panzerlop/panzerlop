@@ -319,7 +319,7 @@ echo ""
 echo " - ! - ! - ! - ! - ! - HELLO THERE : "
 echo ""
 echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR MICROPHONES AND SPEAKERS !!! "
-echo ""
+echo " To undo this you'll need to remove the added lines from /etc/modprobe.d/blacklist-mic.conf "
 echo ""
 sleep 3
 
