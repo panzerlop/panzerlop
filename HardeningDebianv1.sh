@@ -230,7 +230,10 @@ firewall() {
     systemctl enable ufw.service
 
     # Deny all incoming traffic.
-    ufw default deny incoming # Also disables ICMP timestamps
+    ufw default deny incoming 
+    
+    # Also disable ICMP timestamps
+    sysctl -w net.ipv4.tcp_timestamps=0
     
   fi
 }
@@ -268,7 +271,7 @@ debscan() {
 
 listbugs () {
 
-  read -r -p "Do you want to install debscan? (y/n) " listbugs
+  read -r -p "Do you want to install listbugs? (y/n) " listbugs
   if [ "${listbugs}" = "y" ]; then
   
     apt-get -y install listbugs 
