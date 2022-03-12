@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #2019 script Copyright (C) 2019  madaidan under GPL
-#2022 script Copyright (C) 2022  panzerlop under GPLv3
+#2022 script panzerlop under GPLv3
 #Also shoutout to the Whonix team
 
 #This version is changed to less interupt with daily computing and (mostly) appropriate for Debian derivitives
@@ -224,13 +224,8 @@ firewall() {
 
   ## Firewall
 
-  read -r -p "Install ufw? A Firewall. (y/n) " install_ufw
-	if [ "$(dpkg -l | awk '/ufw/ {print }'|wc -l)" -ge 1 ]; then
-	echo You need UFW installed for the next part, it should be anyway
-	echo ""
-	echo It is a simple but effective firewall
-	else
-	apt-get -y install UFW
+  read -r -p "Install UFW Firewall and configure it? (y/n) " install_ufw
+	  if [ "${install_ufw}" = "y" ]; then
 
     # Enable UFW.
     ufw enable
@@ -238,17 +233,16 @@ firewall() {
 
     # Deny all incoming traffic.
     ufw default deny incoming # Also disables ICMP timestamps
+    
   fi
 }
 
 firejail() {
 
-# !!!!!!!!!!!!!!!!!!
-# for some reason this doesn't actually install listbugs same with debscan above, at least on Linux Mint 21.10, no idea why, will try on Kubuntu VM
-
-    # Installs Firejail if it isn't already.
-  read -r -p "Install Firejail? (y/n) " install_firejail
-	if [ "$(dpkg -l | awk '/firejail/ {print }'|wc -l)" -ge 1 ]; then
+    # Installs Firejail 
+  read -r -p "Do you want to install firejail? (y/n) " firejail
+  if [ "${firejail}" = "y" ]; then
+  
     apt-get -y install firejail 
 
   fi
@@ -256,30 +250,31 @@ firejail() {
 
 debsums() {
     # Installs debsums if it isn't already.
-  read -r -p "Install debsums? (y/n) " install_debsums
-	if [ "$(dpkg -l | awk '/debsums/ {print }'|wc -l)" -ge 1 ]; then
- 		apt-get -y install debsums
+  read -r -p "Do you want to install debsums? (y/n) " debsums
+  if [ "${debsums}" = "y" ]; then
+  
+    apt-get -y install debsums 
 
   fi
 }
 
 debscan() {
 
-    # Installs debscan if it isn't already.
-  read -r -p "Install debsecan? (y/n) " install_debscan
-	if [ "$(dpkg -l | awk '/debscan/ {print }'|wc -l)" -ge 1 ]; then
+  read -r -p "Do you want to install debscan? (y/n) " debscan
+  if [ "${debscan}" = "y" ]; then
+  
     apt-get -y install debscan 
-	
+
   fi
 }
 
 listbugs () {
 
+  read -r -p "Do you want to install debscan? (y/n) " listbugs
+  if [ "${listbugs}" = "y" ]; then
+  
+    apt-get -y install listbugs 
 
-    # Installs listbugs if it isn't already.
-  read -r -p "Install listbugs? (y/n) " install_listbugs
-	if [ "$(dpkg -l | awk '/listbugs/ {print }'|wc -l)" -ge 1 ]; then
-	sudo aptitude update && aptitude install -y listbugs
   fi
 }
 
@@ -352,7 +347,7 @@ configure_hostname() {
 ending() {
   ## Reboot
   echo ""
-   echo " https://github.com/panzerlop/panzerlop "
+   echo " https://github.com/panzerlop/"
    echo ""
    echo "Hope this helped"
    echo "Maybe come improve it?"
@@ -400,7 +395,7 @@ elif ! [ "${start}" = "y" ]; then
   echo ""
   echo "You did not enter a correct character."
   echo ""
-  echo "Be careful, especially if you want microphone and audio access"
+  echo "Be careful when reading through this script..."
   exit 1
 fi
 
