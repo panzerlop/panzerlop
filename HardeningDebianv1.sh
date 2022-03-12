@@ -184,8 +184,6 @@ restrict_root() {
   # Restricting su to users in the wheel group. 
   
   # !!!!!!! I'm pretty sure this only works on Arch ( the wheel group) 
-  
-  # Need to find a Debian based alternative !!!!!!!
 
   read -r -p "Restrict su to users in the wheel group? (y/n) " restrict_su
   if [ "${restrict_su}" = "y" ]; then
@@ -365,6 +363,8 @@ echo "https://theprivacyguide1.github.io/linux_hardening_guide.html"
 echo ""
 echo "The vast majority or this script is owed to the information here."
 echo "And the various generosity of some security forums online."
+echo ""
+echo "You should run debsums after this to check for incorrect packages..."
 echo ""
 cat << "EOF"
                .-.
