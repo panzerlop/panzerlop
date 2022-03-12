@@ -9,3 +9,7 @@ This will remove any modifcations you've done to the deksktop like pinned apps &
 
 I have also seen users log in to their wallpaper, mouse and nothing else, Right click > Add Panel > Default panel.
 Another case that this can fix is when the search in the Application Launcher displays nothing.
+
+A simpler way to just restart the GUI without removing preferences
+
+kquitapp5 plasmashell || killall plasmashell && kstart5 plasmashell
