@@ -181,18 +181,7 @@ restrict_root() {
     echo "" > /etc/securetty
   fi
 
-  # Restricting su to users in the wheel group. 
-  
-  # !!!!!!! I'm pretty sure this only works on Arch ( the wheel group) 
-
-  read -r -p "Restrict su to users in the wheel group? (y/n) " restrict_su
-  if [ "${restrict_su}" = "y" ]; then
-    # Restricts su by editing files in /etc/pam.d/
-    sed -i 's/#auth		required	pam_wheel.so use_uid/auth		required	pam_wheel.so use_uid/' /etc/pam.d/su
-    sed -i 's/#auth		required	pam_wheel.so use_uid/auth		required	pam_wheel.so use_uid/' /etc/pam.d/su-l
-  fi
-
-  # Lock the root account - you should always do this lads.
+  # Lock the root account - always do this.
   
   read -r -p "Lock the root account?   (y/n) " lock_root_account
   if [ "${lock_root_account}" = "y" ]; then
