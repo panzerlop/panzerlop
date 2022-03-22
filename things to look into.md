@@ -14,5 +14,4 @@ https://linuxconfig.org/how-to-install-pipewire-on-ubuntu-linux
 
  disabling btusb's autosuspend with:
 
-:: Code ::
 echo 'options btusb enable_autosuspend=0' | sudo tee /etc/modprobe.d/bluetooth.conf
