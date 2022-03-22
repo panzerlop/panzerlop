@@ -227,6 +227,8 @@ firewall() {
   fi
 }
 
+#change to flatseal
+
 firejail() {
 
     # Installs Firejail 
@@ -248,25 +250,6 @@ debsums() {
   fi
 }
 
-debscan() {
-
-  read -r -p "Do you want to install debscan? (y/n) " debscan
-  if [ "${debscan}" = "y" ]; then
-  
-    apt-get -y install debscan 
-
-  fi
-}
-
-listbugs () {
-
-  read -r -p "Do you want to install listbugs? (y/n) " listbugs
-  if [ "${listbugs}" = "y" ]; then
-  
-    apt-get -y install listbugs 
-
-  fi
-}
 
 #    - apt-listbugs                                            [ Not Installed ]
 #    - apt-listchanges                                         [ Not Installed ]
@@ -399,8 +382,6 @@ moreservices
 configure_hostname
 disable_nf_conntrack_helper
 debsums
-debscan
 firejail
-listbugs
 webcam_and_microphone
 ending
