@@ -7,5 +7,6 @@ covers for eBPF backdoor? ( patched in later kernals ? )
 sudo rm -rf /var/cache/snapd/;sudo apt autoremove --purge snapd;sudo apt-mark hold snapd;rm -fr ~/snap
 
 # pipewire
+https://linuxconfig.org/how-to-install-pipewire-on-ubuntu-linux
 
 # wayland
