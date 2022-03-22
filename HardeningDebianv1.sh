@@ -10,10 +10,7 @@
 #
 #https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
-# The last few programs won't install - no errors thrown debsums,debscan,firejail,listbugs ?
-#
-# Rest seems to function perfectly
-#
+# tested on Kubuntu 21.10
 
 set -eu -o pipefail # fail on error and report it, debug all lines
 
