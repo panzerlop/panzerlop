@@ -21,6 +21,7 @@ for i in ${interfaces}
 do
 
  sudo macchanger -e $i >/dev/null # Hide the output so it can't be discovered with systemd logs.
+ 
 done
 
 for i in ${interfaces}
