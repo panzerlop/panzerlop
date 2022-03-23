@@ -1,3 +1,7 @@
+Dolphin as ROOT:
+
+pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dolphin
+
 sysctl kernel.unprivileged_bpf_disabled=1
 
 covers for eBPF backdoor? ( patched in later kernals ? )
