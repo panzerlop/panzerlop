@@ -56,3 +56,7 @@ add this list to ublock origin in settings
 https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
 
 https://github.com/gorhill/uBlock/wiki/Dashboard:-Filter-lists
+
+___________________________________________________________________________________________
+
+https://github.com/ishitatsuyuki/LatencyFleX
