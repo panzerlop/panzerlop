@@ -146,7 +146,7 @@ vm.mmap_rnd_compat_bits=16" > /etc/sysctl.d/mmap_aslr.conf
     fi
 
     # Disable unprivileged user namespaces.
-    read -r -p "Disable unprivileged user namespaces? (y/n) " disable_unprivileged_userns
+    read -r -p "Disable unprivileged user namespaces? THIS MAY BREAK FLATPAKS ( kernel.unprivileged_userns_clone=0 )(y/n) " disable_unprivileged_userns
     if [ "${disable_unprivileged_userns}" = "y" ]; then
       echo "kernel.unprivileged_userns_clone=0" > /etc/sysctl.d/unprivileged_users_clone.conf
     fi
@@ -221,19 +221,6 @@ firewall() {
     # Also disable ICMP timestamps
     sysctl -w net.ipv4.tcp_timestamps=0
     
-  fi
-}
-
-#change to flatseal
-
-firejail() {
-
-    # Installs Firejail 
-  read -r -p "Do you want to install firejail? (y/n) " firejail
-  if [ "${firejail}" = "y" ]; then
-  
-    apt-get -y install firejail 
-
   fi
 }
 
@@ -379,6 +366,5 @@ moreservices
 configure_hostname
 disable_nf_conntrack_helper
 debsums
-firejail
 webcam_and_microphone
 ending
