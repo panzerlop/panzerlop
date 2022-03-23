@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Simple Mac Adress Spoofer Script for Linux, improved for Ubuntu 21.10
-
 sudo apt install macchanger
 
 sudo apt install net-tools
@@ -23,7 +21,6 @@ for i in ${interfaces}
 do
 
  sudo macchanger -e $i >/dev/null # Hide the output so it can't be discovered with systemd logs.
- 
 done
 
 for i in ${interfaces}
@@ -38,5 +35,3 @@ sudo service NetworkManager start;
 echo "done"
 
 sleep 5;
-
-
