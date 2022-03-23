@@ -49,3 +49,8 @@ To set it to a value during system startup, create a file in /etc/sysctl.d
 containing a line like this:
 
     user.max_user_namespaces=1000
+
+
+add this list to ublock origin in settings
+
+https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
