@@ -1,7 +1,19 @@
 First install the games and run it through steam.
 
+Max Payne 1 seems to run fine on Proton EXperimental as of 28/03/22
+
 >> Requisite:: Open both games first!!
 
+Protontricks install:
+_______________________________________________________________
+sudo apt install pipx
+sudo apt install -y python3-pip python3-setuptools python3-venv
+sudo apt install winetricks cabextract
+python3 -m pip install --user pipx
+pipx install protontricks
+
+python3 -m pipx ensurepath
+_______________________________________________________________
 protontricks 12150 arial vcrun2019 cjkfonts win10
 protontricks 12140 arial vcrun2019 cjkfonts win10
 
