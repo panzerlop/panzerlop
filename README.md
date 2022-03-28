@@ -19,7 +19,6 @@ _________________________________________________________________
 - 📫 How to reach me ... panzerlop@protonmail.com
 - https://www.twitch.tv/panzerlop
 - HELPED YOU? Coffee coins here pls; 
-> - XMR: 42Hnyztrcf62m8b72T5CaGKAvaiEAvWN6EeAvAwCDRxDWczvqGbNqCi9p39J9J74WmThmvAMEeYg9TPxtCc4DJv9HMZZHDr
 _________________________________________________________________
 
 > Operating System: Kubuntu 21.10
