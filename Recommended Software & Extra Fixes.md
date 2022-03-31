@@ -10,7 +10,7 @@ sudo rivalcfg --update-udev
 ```
 **Note**: if the sensitivity options don't work, try
 
-`sudo rivalconfig -s 400`
+`sudo rivalcfg -s 400`
 
 the `-p` flag will also allow you to change the polling rate (mine is 1000Hz).
 
