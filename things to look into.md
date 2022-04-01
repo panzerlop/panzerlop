@@ -1,3 +1,7 @@
+https://techviewleo.com/how-to-install-kde-plasma-desktop-on-linux-mint/
+
+MINT with KDE installed seems better than Kubuntu
+
 Dolphin as ROOT:
 
 pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dolphin
