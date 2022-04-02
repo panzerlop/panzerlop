@@ -10,7 +10,7 @@
 #
 #https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
-# tested on Kubuntu 21.10
+# tested on Ubuntu 21.10
 
 set -eu -o pipefail # fail on error and report it, debug all lines
 
