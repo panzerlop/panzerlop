@@ -8,15 +8,11 @@ sudo apt install mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 
 
 sudo apt-get update && sudo apt upgrade
 
-
 sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev libtcmalloc-minimal4
-
 
 sudo updatedb
 
-
 sudo apt install libtcmalloc-minimal4
-
 
 Then navigate to the location where the game is installed, for me this is:
 
@@ -25,18 +21,28 @@ Then navigate to the location where the game is installed, for me this is:
 ^^ Note: You'll have to show hidden folders to see ones that start with a ".", Click on the file explorer window and then press Ctrl + H.
 The folders with the "." prefix will now become visible.
 
-Exit Steam
-
 Open a Terminal window in the "Counter-Strike Global Offensive/bin" location and type the following;
+
+pkill steam
+
 
 cp /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.5.9 libtcmalloc_minimal.so.0 
 
 mv libtcmalloc_minimal.so.0 libtcmalloc_minimal.so.0.orig
 cp /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.5.9 libtcmalloc_minimal.so.0
 
-Right click the game and set the launch options "-nojoy -novid"
+next open a new Terminal and type the following:
 
-Reboot.
+pkill steam
+
+sudo apt install libtcmalloc-minimal4
+
+cd "`locate linux64 | grep ve/bin/linux64$`"
+
+mv libtcmalloc_minimal.so.0 libtcmalloc_minimal.so.0-
+mv libtcmalloc_minimal.so.4 libtcmalloc_minimal.so.4-
+
+sudo ln /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4 /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.0 -s 
 
 Fin.
 
