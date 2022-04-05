@@ -9,9 +9,6 @@ sudo apt install mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 
 sudo apt-get update && sudo apt upgrade
 
 
-Reboot.
-
-
 sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev libtcmalloc-minimal4
 
 
@@ -33,6 +30,8 @@ Open a Terminal window in the "Counter-Strike Global Offensive/bin" location and
 cp /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.5.9 libtcmalloc_minimal.so.0 
 
 Right click the game and set the launch options "-nojoy -novid"
+
+Reboot.
 
 Fin.
 
