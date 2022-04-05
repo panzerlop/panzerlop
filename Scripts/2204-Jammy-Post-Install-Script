@@ -55,8 +55,6 @@ install_flatpak() {
   read -r -p "InstallFlatpak backend and add flathub? (y/n) " install_flatpak
 	  if [ "${install_flatpak}" = "y" ]; then
 
-sudo add-apt-repository ppa:alexlarsson/flatpak
-
 sudo apt update
       
 sudo apt install flatpak -y
