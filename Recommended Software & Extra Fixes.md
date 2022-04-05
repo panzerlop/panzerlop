@@ -3,6 +3,7 @@
 ```
 git clone https://github.com/flozz/rivalcfg.git
 cd rivalcfg
+sudo apt-get install pip
 sudo pip install .
 sudo rivalcfg --sensitivity1=400
 sudo rivalcfg --sensitivity2=400
