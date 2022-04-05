@@ -247,7 +247,7 @@ debsums() {
 
 disable_nf_conntrack_helper() {
   ## Disable Netfilter connection tracking helper.
-  read -r -p "Disable the Netfilter automatic conntrack helper assignment? " disable_conntrack_helper
+  read -r -p "Disable the Netfilter automatic conntrack helper assignment? ( y/n)" disable_conntrack_helper
   if [ "${disable_conntrack_helper}" = "y" ]; then
     echo "options nf_conntrack nf_conntrack_helper=0" > /etc/modprobe.d/no-conntrack-helper.conf
   fi
@@ -258,43 +258,6 @@ disable_nf_conntrack_helper() {
 # MAC Randomiser in script soulution would be nice without using curl from 2019 source
 #
 #
-
-webcam_and_microphone() {
-
-sleep 3
-echo ""
-echo ""
-echo " - ! - ! - ! - ! - ! - HELLO THERE : "
-echo " !!! THIS WILL BLACKLIST YOUR CAMERA MODULE!!! "
-echo ""
-echo ""
-  ## Block the webcam and microphone.
-  read -r -p "Do you want to blacklist the webcam kernel module? (y/n) " blacklist_webcam
-  if [ "${blacklist_webcam}" = "y" ]; then
-    # Blacklist the webcam kernel module.
-    echo "install uvcvideo /bin/true" > /etc/modprobe.d/blacklist-webcam.conf
-  fi
-echo ""
-echo ""
-echo " - ! - ! - ! - ! - ! - HELLO THERE : "
-echo ""
-echo " !!! IF YOU DO THIS IT WILL BLACKLIST YOUR MICROPHONES AND SPEAKERS !!! "
-echo " To undo this you'll need to remove the added lines from /etc/modprobe.d/blacklist-mic.conf "
-echo ""
-sleep 3
-
-  read -r -p "Do you want to blacklist the microphone and speaker kernel module?  (y/n) " blacklist_mic
-  if [ "${blacklist_mic}" = "y" ]; then
-    # Blacklist the microphone and speaker kernel module.
-    mic_modules=$(awk '{print $2}' /proc/asound/modules | awk '!x[$0]++')
-
-    # Accounts for multiple sound cards.
-    for i in ${mic_modules}
-    do
-      echo "install ${i} /bin/true" >> /etc/modprobe.d/blacklist-mic.conf
-    done
-  fi
-}
 
 configure_hostname() {
  echo ""
@@ -322,12 +285,12 @@ ending() {
 
 echo ""
 echo "Security Hardening Script for Debian & derivitives such as Linux Mint"
+echo "The vast majority or this script is owed to the information here:"
 echo "https://theprivacyguide1.github.io/linux_hardening_guide.html"
 echo ""
-echo "The vast majority or this script is owed to the information here."
 echo "And the various generosity of some security forums online."
 echo ""
-echo "You should run debsums after this to check for incorrect packages..."
+echo "You should run debsums after this to check for incorrect package md5 hashes..."
 echo ""
 cat << "EOF"
                .-.
@@ -370,5 +333,4 @@ moreservices
 configure_hostname
 disable_nf_conntrack_helper
 debsums
-webcam_and_microphone
 ending
