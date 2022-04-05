@@ -29,6 +29,9 @@ Open a Terminal window in the "Counter-Strike Global Offensive/bin" location and
 
 cp /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.5.9 libtcmalloc_minimal.so.0 
 
+mv libtcmalloc_minimal.so.0 libtcmalloc_minimal.so.0.orig
+cp /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.5.9 libtcmalloc_minimal.so.0
+
 Right click the game and set the launch options "-nojoy -novid"
 
 Reboot.
