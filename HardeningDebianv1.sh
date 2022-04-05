@@ -146,11 +146,14 @@ vm.mmap_rnd_compat_bits=16" > /etc/sysctl.d/mmap_aslr.conf
       echo "kernel.sysrq=0" > /etc/sysctl.d/sysrq.conf
     fi
 
+
+# REMOVED UNTIL FIX FOR FLATPAK DISCOVERED.
+
     # Disable unprivileged user namespaces.
-    read -r -p "Disable unprivileged user namespaces? THIS MAY BREAK FLATPAKS ( kernel.unprivileged_userns_clone=0 )(y/n) " disable_unprivileged_userns
-    if [ "${disable_unprivileged_userns}" = "y" ]; then
-      echo "kernel.unprivileged_userns_clone=0" > /etc/sysctl.d/unprivileged_users_clone.conf
-    fi
+#    read -r -p "Disable unprivileged user namespaces? THIS MAY BREAK FLATPAKS ( kernel.unprivileged_userns_clone=0 )(y/n) " disable_unprivileged_userns
+#    if [ "${disable_unprivileged_userns}" = "y" ]; then
+#      echo "kernel.unprivileged_userns_clone=0" > /etc/sysctl.d/unprivileged_users_clone.conf
+#    fi
 
     # Disable TCP SACK.
     read -r -p "Disable TCP SACK? (y/n) " disable_sack
