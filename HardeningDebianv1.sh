@@ -37,7 +37,7 @@ script_checks() {
     fi
 echo ""
     if [[ "$(id -u)" -ne 0 ]]; then
-      echo "This script needs to be run as root."
+      echo "This script needs to be run as root. (sudo)"
       exit 1
     fi
 }
