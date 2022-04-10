@@ -1,17 +1,19 @@
 #!/bin/bash -e
+
 #2019 script Copyright (C) 2019  madaidan under GPL
 #https://gitlab.com/madaidan/arch-hardening-script
 #2022 script panzerlop under GPLv3
 #Also shoutout to the Whonix team
 
-#This version is changed to less interupt with daily computing and (mostly) appropriate for Debian derivitives
-#The vast majority of the tweaks are from here
+# This version is changed to less interupt with daily computing and (mostly) appropriate for Debian derivitives
 #
-#You SHOULD read the information too.
+# You SHOULD read the information too.
 #
-#https://theprivacyguide1.github.io/linux_hardening_guide.html 
+# The vast majority of the tweaks are from here:
+# https://theprivacyguide1.github.io/linux_hardening_guide.html 
 #
-# tested on Ubuntu 21.10
+# tested on Ubuntu 21.10 + 22.04
+#
 
 set -eu -o pipefail # fail on error and report it, debug all lines
 
