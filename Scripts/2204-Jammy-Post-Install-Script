@@ -52,7 +52,7 @@ sudo chown root:root /etc/apt/preferences.d/no-snap.pref
 
 install_flatpak() {
 
-  read -r -p "InstallFlatpak backend and add flathub? (y/n) " install_flatpak
+  read -r -p "Install Flatpak backend and add flathub? (y/n) " install_flatpak
 	  if [ "${install_flatpak}" = "y" ]; then
 
 sudo apt update
