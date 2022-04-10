@@ -107,6 +107,19 @@ echo ""
   fi
 }
 
+grub_probe_enable() {
+
+  read -r -p "Enable GRUB to probe for other OS and update it's settings? (y/n) " grub_probe_enable
+	  if [ "${grub_probe_enable}" = "y" ]; then
+	  
+
+sudo echo 'GRUB_DISABLE_OS_PROBER=false' | sudo tee -a /etc/default/grub
+
+sudo update-grub
+
+  fi
+}
+
 
 ending() {
   ## Reboot
@@ -164,4 +177,5 @@ disable_snap
 install_flatpak
 install_firefox
 install_pipewire
+grub_probe_enable
 ending 
