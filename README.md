@@ -21,12 +21,12 @@ _________________________________________________________________
 - HELPED YOU? Coffee coins here pls; 
 _________________________________________________________________
 
-> Operating System: Kubuntu 21.10
-> KDE Plasma Version: 5.24.3
-> KDE Frameworks Version: 5.92.0
-> Qt Version: 5.15.2
-> Kernel Version: 5.16.0-16.2-liquorix-amd64 (64-bit)
-> Graphics Platform: X11
-> Processors: 12 × AMD Ryzen 5 3600X 6-Core Processor
-> Memory: 23.5 GiB of RAM
-> Graphics Processor: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
+Operating System: Kubuntu 22.04
+KDE Plasma Version: 5.24.4
+KDE Frameworks Version: 5.92.0
+Qt Version: 5.15.3
+Kernel Version: 5.15.0-25-generic (64-bit)
+Graphics Platform: X11
+Processors: 12 × AMD Ryzen 5 3600X 6-Core Processor
+Memory: 23.4 GiB of RAM
+Graphics Processor: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
