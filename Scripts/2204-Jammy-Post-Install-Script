@@ -4,7 +4,7 @@
 # Snap disable owed to https://github.com/BryanDollery
 # 2022 script panzerlop under GPLv3
 
-# set -eu -o pipefail # fail on error and report it, debug all lines
+#  set -eu -o pipefail # fail on error and report it, debug all lines
 
 
 script_checks() {
