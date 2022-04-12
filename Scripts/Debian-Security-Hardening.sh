@@ -15,7 +15,7 @@
 # tested on Ubuntu 21.10 + 22.04
 #
 
-set -eu -o pipefail # fail on error and report it, debug all lines
+# set -eu -o pipefail # fail on error and report it, debug all lines
 
 
 
