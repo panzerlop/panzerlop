@@ -5,7 +5,7 @@
 # 2022 script panzerlop under GPLv3
 # Also shoutout to the Whonix team
 
-# This version is changed to less interupt with daily computing and (mostly) appropriate for Debian derivitives
+# This version is changed to less interupt with daily computing and appropriate for Debian derivitives
 #
 # You SHOULD read the information too.
 #
