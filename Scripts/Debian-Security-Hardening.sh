@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
-#2019 script Copyright (C) 2019  madaidan under GPL
-#https://gitlab.com/madaidan/arch-hardening-script
-#2022 script panzerlop under GPLv3
-#Also shoutout to the Whonix team
+# 2019 script Copyright (C) 2019  madaidan under GPL
+# https://gitlab.com/madaidan/arch-hardening-script
+# 2022 script panzerlop under GPLv3
+# Also shoutout to the Whonix team
 
 # This version is changed to less interupt with daily computing and (mostly) appropriate for Debian derivitives
 #
