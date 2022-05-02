@@ -214,7 +214,7 @@ firewall() {
 
   ## Firewall
 
-  read -r -p "Install UFW Firewall and configure it? (y/n) " install_ufw
+  read -r -p "Enable UFW Firewall and configure it? (y/n) " install_ufw
 	  if [ "${install_ufw}" = "y" ]; then
 
     # Enable UFW.
