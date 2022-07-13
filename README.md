@@ -1,4 +1,4 @@
--- This GIT is not actively maintained as I'm now using Garuda Arch BUT... -- Welcome to my collection of scripts, fixes and guides for Linux ( using K ubuntu ). Many guides work with a little tweaking under most Debian derivitives.
+-- Overhaul needed but most things still work here... -- Welcome to my collection of scripts, fixes and guides for Linux ( using K ubuntu ). Many guides work with a little tweaking under most Debian derivitives.
 
 <b> Files preceded by a number assume previous number has been read and / or completed. </b>
 
