@@ -2,6 +2,7 @@
 # Syntax Derived from script Copyright (C) 2019 madaidan under GPL
 # Snap disable owed to https://github.com/BryanDollery
 # Disable Telementary owed to https://github.com/LamdaLamdaLamda/disable-ubuntu-telemetry
+#Thanks the-spyke on Github for the instructions on installing Pipewire on 22.04
 # 2022 script panzerlop under GPLv3
 
 
@@ -9,16 +10,16 @@
 if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
   echo "You need nano installed for this script"
 else
- apt-get -y install nano 
+ apt-get -y install nano
 fi
 
 script_checks() {
 
 # !!!!!!!
-# not sure about forcing software updates here without a user prompt, could be bad under some scenarios 
+# not sure about forcing software updates here without a user prompt, could be bad under some scenarios
 
  sudo apt-get update
- 
+
  echo ""
       if ! ps -p 1 | grep systemd &>/dev/null; then
       echo "This script can only be used with systemd."
@@ -29,11 +30,14 @@ echo ""
       echo "This script needs to be run as root. (sudo)"
       exit 1
     fi
+
+echo ""
+
 }
 
 disable_telementary() {
 
-  read -r -p "Disable and remove Snap? (y/n) " disable_telementary
+  read -r -p "Disable ALL Telementary? (y/n) " disable_telementary
 	  if [ "${disable_telementary}" = "y" ]; then
 
 # resolving to localhost:
@@ -48,7 +52,7 @@ echo 127.0.0.1 popcon.ubuntu.com >>/etc/hosts
 # Removing telemetry services:
 apt purge -y ubuntu-report popularity-contest apport whoopsie >/dev/null 2>&1
 
-ubuntu-report -f send no
+echo ""
 
   fi
 }
@@ -81,6 +85,8 @@ sudo mv no-snap.pref /etc/apt/preferences.d/
 sudo chown root:root /etc/apt/preferences.d/no-snap.pref
 
 
+echo ""
+
   fi
 }
 
@@ -90,6 +96,8 @@ fix_appimage() {
 	  if [ "${fix_appimage}" = "y" ]; then
 
 sudo apt install libfuse2
+
+echo ""
 
   fi
 }
@@ -104,6 +112,8 @@ sudo apt update
 sudo apt install flatpak -y
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+echo ""
 
   fi
 }
@@ -127,24 +137,24 @@ echo " "
 
 install_pipewire() {
 
-  read -r -p "Install PipeWire Audio Server? (y/n) " install_pipewire
+  read -r -p "Install PipeWire Audio Server and let it control Bluetooth audio? (y/n) [ REQUIRES REBOOT] " install_pipewire
 	  if [ "${install_pipewire}" = "y" ]; then
 
-sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
+sudo apt install pipewire-pulse
+sudo apt install \
+  libfdk-aac2 \
+  libldacbt-{abr,enc}2 \
+  libopenaptx0
 
-sudo apt update
+  sudo apt install \
+  libspa-0.2-bluetooth \
+  pipewire-audio-client-libraries \
+  pipewire-media-session- \
+  wireplumber
 
-sudo apt install pipewire pipewire-audio-client-libraries
+  sudo cp /usr/share/doc/pipewire/examples/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d/
 
-sudo apt install gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.2-{bluetooth,dev,jack,modules} pipewire{,-{audio-client-libraries,pulse,media-session,bin,locales,tests}}
-
-systemctl --user daemon-reload
-
-systemctl --user --now disable pulseaudio.service pulseaudio.socket
-
-systemctl --user --now enable pipewire pipewire-pulse
-
-pactl info
+  sudo apt remove pulseaudio-module-bluetooth
 
 echo ""
 
@@ -217,7 +227,7 @@ fi
 
 disable_telementary
 disable_snap
-appimage_fix
+fix_appimage
 install_flatpak
 install_firefox
 install_pipewire
