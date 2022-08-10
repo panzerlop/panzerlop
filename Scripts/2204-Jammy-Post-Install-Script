@@ -1,16 +1,40 @@
 #!/bin/bash -e
-
 # Syntax Derived from script Copyright (C) 2019 madaidan under GPL
 # Snap disable owed to https://github.com/BryanDollery
 # Disable Telementary owed to https://github.com/LamdaLamdaLamda/disable-ubuntu-telemetry
 # 2022 script panzerlop under GPLv3
 
 
+
+if [ "$(dpkg -l | awk '/nano/ {print }'|wc -l)" -ge 1 ]; then
+  echo "You need nano installed for this script"
+else
+ apt-get -y install nano 
+fi
+
 script_checks() {
+
+# !!!!!!!
+# not sure about forcing software updates here without a user prompt, could be bad under some scenarios 
 
  sudo apt-get update
  
+ echo ""
+      if ! ps -p 1 | grep systemd &>/dev/null; then
+      echo "This script can only be used with systemd."
+      exit 1
+    fi
+echo ""
+    if [[ "$(id -u)" -ne 0 ]]; then
+      echo "This script needs to be run as root. (sudo)"
+      exit 1
+    fi
+}
+
 disable_telementary() {
+
+  read -r -p "Disable and remove Snap? (y/n) " disable_telementary
+	  if [ "${disable_telementary}" = "y" ]; then
 
 # resolving to localhost:
 echo "[*] Resolving \"metrics.ubuntu.com\" to localhost"
@@ -23,15 +47,6 @@ echo 127.0.0.1 popcon.ubuntu.com >>/etc/hosts
 
 # Removing telemetry services:
 apt purge -y ubuntu-report popularity-contest apport whoopsie >/dev/null 2>&1
-
-if test $? -eq 0 
-then
-    echo "[+] Telemtry services successfully removed."
-    exit 0
-else
-    echo "[-] Removing of telemtry services failed."
-    exit 1
-fi
 
 ubuntu-report -f send no
 
@@ -65,7 +80,7 @@ EOF
 sudo mv no-snap.pref /etc/apt/preferences.d/
 sudo chown root:root /etc/apt/preferences.d/no-snap.pref
 
-    
+
   fi
 }
 
@@ -85,7 +100,7 @@ install_flatpak() {
 	  if [ "${install_flatpak}" = "y" ]; then
 
 sudo apt update
-      
+
 sudo apt install flatpak -y
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -97,7 +112,7 @@ install_firefox() {
 
   read -r -p "Install the Firefox Flatpak? (y/n) " install_firefox
 	  if [ "${install_firefox}" = "y" ]; then
-	  
+
 flatpak install flathub org.mozilla.firefox
 
 echo " To run Firefox from Terminal type the following: "
@@ -113,8 +128,8 @@ echo " "
 install_pipewire() {
 
   read -r -p "Install PipeWire Audio Server? (y/n) " install_pipewire
-	  if [ "${install_firefox}" = "y" ]; then
-	  
+	  if [ "${install_pipewire}" = "y" ]; then
+
 sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
 
 sudo apt update
@@ -140,7 +155,7 @@ grub_probe_enable() {
 
   read -r -p "Enable GRUB to probe for other OS and update it's settings? (y/n) " grub_probe_enable
 	  if [ "${grub_probe_enable}" = "y" ]; then
-	  
+
 
 sudo echo 'GRUB_DISABLE_OS_PROBER=false' | sudo tee -a /etc/default/grub
 
@@ -160,7 +175,7 @@ ending() {
   read -r -p "Reboot to apply all the changes? (y/n) " reboot
   if [ "${reboot}" = "y" ]; then
     reboot
-    
+
   fi
 }
 
@@ -177,7 +192,7 @@ cat << "EOF"
    `-`  `       ,   :
      \   / ,..-`   ,
       `./ /    .-.`
-         `-..-(   ) 
+         `-..-(   )
                `-`
 EOF
 
@@ -207,4 +222,4 @@ install_flatpak
 install_firefox
 install_pipewire
 grub_probe_enable
-ending 
+ending
