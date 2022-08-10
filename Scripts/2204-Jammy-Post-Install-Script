@@ -48,6 +48,16 @@ sudo chown root:root /etc/apt/preferences.d/no-snap.pref
   fi
 }
 
+fix_appimage() {
+
+  read -r -p "Fix Appimage support? ( libfuse2 ) (y/n) " fix_appimage
+	  if [ "${fix_appimage}" = "y" ]; then
+
+sudo apt install libfuse2
+
+  fi
+}
+
 install_flatpak() {
 
   read -r -p "Install Flatpak backend and add flathub? (y/n) " install_flatpak
@@ -170,6 +180,7 @@ elif ! [ "${start}" = "y" ]; then
 fi
 
 disable_snap
+appimage_fix
 install_flatpak
 install_firefox
 install_pipewire
