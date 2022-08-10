@@ -2,6 +2,7 @@
 
 # Syntax Derived from script Copyright (C) 2019 madaidan under GPL
 # Snap disable owed to https://github.com/BryanDollery
+# Disable Telementary owed to https://github.com/LamdaLamdaLamda/disable-ubuntu-telemetry
 # 2022 script panzerlop under GPLv3
 
 
@@ -9,13 +10,33 @@ script_checks() {
 
  sudo apt-get update
  
-echo ""
-    if [[ "$(id -u)" -ne 0 ]]; then
-      echo "This script needs to be run as root (sudo)."
-      exit 1
-    fi
-}
+disable_telementary() {
 
+# resolving to localhost:
+echo "[*] Resolving \"metrics.ubuntu.com\" to localhost"
+echo 127.0.0.1 www.metrics.ubuntu.com >>/etc/hosts
+echo 127.0.0.1 metrics.ubuntu.com >>/etc/hosts
+
+echo "[*] Resolving \"popcon.ubuntu.com\" to localhost"
+echo 127.0.0.1 www.popcon.ubuntu.com >>/etc/hosts
+echo 127.0.0.1 popcon.ubuntu.com >>/etc/hosts
+
+# Removing telemetry services:
+apt purge -y ubuntu-report popularity-contest apport whoopsie >/dev/null 2>&1
+
+if test $? -eq 0 
+then
+    echo "[+] Telemtry services successfully removed."
+    exit 0
+else
+    echo "[-] Removing of telemtry services failed."
+    exit 1
+fi
+
+ubuntu-report -f send no
+
+  fi
+}
 
 disable_snap() {
 
@@ -179,6 +200,7 @@ elif ! [ "${start}" = "y" ]; then
   exit 1
 fi
 
+disable_telementary
 disable_snap
 appimage_fix
 install_flatpak
